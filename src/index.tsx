@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './styles/index.scss';
 import App from './App';
-import { ErrorBoundary, ThemeProvider } from './providers';
+import { ErrorBoundary, ThemeProvider } from 'providers';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(

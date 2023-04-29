@@ -19,10 +19,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "/src",
+    "baseUrl": "src",
     "paths": {
-      "providers":["providers/*"],
-      "shared":["shared/*"],
+      "providers/*":["providers/*"],
+      "shared/*":["shared/*"],
     }
   },
   "include": [
