@@ -32,9 +32,75 @@
     --color-primary-base: #6B4EFF;
     --color-primary-dark: #5538EE;
 
+    //? ============== Red ==============
+
+    --color-red-lightest: #FFE5E5;
+    --color-red-lighter: #FF9898;
+    --color-red-light: #FF6D6D;
+    --color-red-base: #FF5247;
+    --color-red-darkest: #D3180C;
+
+
+    //? ============== Green ==============
+
+    --color-green-lightest: #ECFCE5;
+    --color-green-lighter: #7DDE86;
+    --color-green-light: #4CD471;
+    --color-green-base: #23C16B;
+    --color-green-darkest: #198155;
+
+
+    //? ============== Yellow ==============
+
+    --color-yellow-lightest: #FFEFD7;
+    --color-yellow-lighter: #FFD188;
+    --color-yellow-light: #FFC462;
+    --color-yellow-base: #FFB323;
+    --color-yellow-darkest: #A05E03;
+
+    //? ============== Blue ==============
+
+    --color-blue-lightest: #C9F0FF;
+    --color-blue-lighter: #9BDCFD;
+    --color-blue-light: #6EC2FB;
+    --color-blue-base: #48A7F8;
+    --color-blue-darkest: #0065D0;
+
+    //? ============== Facebook ==============
+
+    --color-facebook-base: #0078FF;
+    --color-facebook-dark: #0067DB;
+
+    //? ============== Twitter ==============
+
+    --color-twitter-base: #1DA1F2;
+    --color-twitter-dark: #0C90E1;
+
     //* ============== Typography ==============
 
     --typography-type-1: 48px / 56px;
+    --typography-type-2: 32px / 36px;
+    --typography-type-3: 24px / 32px;
+
+    //? ============== Large ==============
+    --typography-large-none: 18px / 18px;
+    --typography-large-tight: 18px / 20px;
+    --typography-large-normal: 18px / 24px;
+
+    //? ============== Regular ==============
+    --typography-regular-none: 16px / 16px;
+    --typography-regular-tight: 16px / 20px;
+    --typography-regular-normal: 16px / 24px;
+
+    //? ============== Small ==============
+    --typography-small-none: 14px / 14px;
+    --typography-small-tight: 14px / 16px;
+    --typography-small-normal: 14px / 20px;
+
+    //? ============== Tiny ==============
+    --typography-tiny-none: 12px / 12px;
+    --typography-tiny-tight: 12px / 14px;
+    --typography-tiny-normal: 12px / 16px;
 
     //* ============== Box Shadow ==============
 
