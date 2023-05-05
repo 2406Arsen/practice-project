@@ -1,0 +1,144 @@
+//Light
+.LightActiveDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+
+    /* Mode=Light, State=Active
+
+Part of "Date Pickers" component
+*/
+
+    /* Primary/Dark */
+
+    background: #5538EE;
+    border-radius: 80px;
+
+    .LightActiveDateNumber {
+        /* Number */
+
+        /* /Small/One Liner/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+
+        /* Sky/White */
+
+        color: #FFFFFF;
+
+    }
+}
+
+.LightDefaultDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+
+    /* Mode=Light, State=Default
+
+Part of "Date Pickers" component
+*/
+
+
+    /* Sky/White */
+
+    background: #FFFFFF;
+    border-radius: 80px;
+
+    .LightDefaultDateNumber {
+        /* Number */
+
+
+        /* /Small/One Liner/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+
+        /* Grayscale/Black */
+
+        color: #000000;
+
+    }
+
+}
+
+//Dark
+
+.DarkActiveDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+
+    /* Mode=Light, State=Active
+
+Part of "Date Pickers" component
+*/
+
+    /* Primary/Base */
+
+    background: #6B4EFF;
+    border-radius: 80px;
+
+    .DarkActiveDateNumber {
+        /* Number */
+
+        /* /Small/One Liner/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+
+        /* Sky/White */
+
+        color: #FFFFFF;
+
+    }
+}
+
+.DarkDefaultDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+
+    /* Mode=Light, State=Default
+
+Part of "Date Pickers" component
+*/
+
+
+    /* Ink/Darkest
+
+Master text
+*/
+    background: #090A0A;
+    border-radius: 80px;
+
+    .DarkDefaultDateNumber {
+        /* Number */
+
+
+        /* /Small/One Liner/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+
+        color: #FFFFFF;
+
+    }
+
+}

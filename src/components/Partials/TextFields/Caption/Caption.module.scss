@@ -1,0 +1,49 @@
+.LightCaption {
+    /* Caption */
+
+    width: 52px;
+    height: 20px;
+
+    /* Small/Normal/Regular */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+
+    /* Ink/Lighter */
+
+    color: var(--color-ink-lighter);
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.DarkCaption {
+    /* Caption */
+
+    width: 52px;
+    height: 20px;
+
+    /* Small/Normal/Regular */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    /* Sky/Dark */
+
+    color: var(--color-sky-dark);
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

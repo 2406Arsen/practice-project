@@ -1,0 +1,98 @@
+//Light
+
+.LightTabBars {
+    /* Mode=Light, State=False
+
+Part of "Tab Bars" component
+*/
+
+    position: absolute;
+    left: 10.86%;
+    right: 60.86%;
+    top: 21.43%;
+    bottom: 53.57%;
+
+    /* Sky/White */
+
+    background: #FFFFFF;
+
+    .LightTabBarsTitle {
+        /* Title */
+
+
+        position: absolute;
+        height: 12px;
+        left: 0px;
+        right: 0px;
+        top: calc(50% - 12px/2 + 14px);
+
+        /* Tiny/None/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        /* Ink/Light */
+
+        color: #6C7072;
+
+
+    }
+    .LightTabBarsIcon{
+        position: relative;
+width: 32px;
+height: 32px;
+
+    }
+}
+
+.LightTabBarsOn {
+    /* Mode=Light, State=True
+
+Part of "Tab Bars" component
+*/
+
+    position: absolute;
+    left: 10.86%;
+    right: 60.86%;
+    top: 53.57%;
+    bottom: 21.43%;
+
+    /* Sky/White */
+
+    background: #FFFFFF;
+
+    .LightTabBarsTitleOn {
+        /* Title */
+
+
+        position: absolute;
+        height: 12px;
+        left: 0px;
+        right: 0px;
+        top: calc(50% - 12px/2 + 14px);
+
+        /* Tiny/None/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        /* Primary/Base */
+
+        color: #6B4EFF;
+
+    }
+}
+
+//Dark
