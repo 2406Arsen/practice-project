@@ -7907,6 +7907,11 @@ sanitize.css@*:
   resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-13.0.0.tgz#2675553974b27964c75562ade3bd85d79879f173"
   integrity sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==
 
+sas@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/sas/-/sas-3.0.4.tgz#85dba43f35b314d109b8f7cd1412249995035064"
+  integrity sha512-Fi1sfAdsEpuNR1Ho7/lkrJYFU7kRPusFWFQP401lz0NIFX0OfcWhsUOXzEKyoNzW0TorfdmyC2yGorJ/CiNGqg==
+
 sass-loader@^12.3.0:
   version "12.6.0"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-12.6.0.tgz#5148362c8e2cdd4b950f3c63ac5d16dbfed37bcb"

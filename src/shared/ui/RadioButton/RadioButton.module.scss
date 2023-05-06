@@ -1,0 +1,60 @@
+.RadioButtons {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+.CircleIcone{
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        border-radius: 32px;
+};
+
+.light{
+    &.selected{
+        background-color: var(--color-primary-base); 
+        .CircleIcone{
+            background-color: var(--color-sky-white); 
+        };
+        &:disabled{
+            background: var(--color-sky-light); 
+            .CircleIcone{
+                background-color: var(--color-sky-lighter); 
+            }
+        };
+    };
+    &.notSelected{
+        background-color: var(--color-sky-white); 
+        border: 1px solid var(--color-sky-base); 
+        &:disabled{
+            accent-color: var(--color-sky-white); 
+            border: 1px solid var(--color-sky-light); 
+        }
+    };
+};
+
+.dark {
+    &.selected{
+        background-color: var(--color-primary-base);
+        .CircleIcone{
+            background-color: var(--color-sky-white); 
+        }
+        &:disabled{
+            background-color: var(--color-ink-darker); 
+            .CircleIcone{
+                background-color: var(--color-ink-dark); 
+            }
+        }
+    };
+    &.notSelected{
+        border: 1px solid var(--color-ink-light); 
+        &:disabled{
+            border: 1px solid var(--color-ink-dark); 
+        }
+    };
+};

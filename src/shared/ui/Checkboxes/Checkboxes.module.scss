@@ -1,0 +1,92 @@
+.Checkboxes {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px; 
+};
+
+.CheckedIcone{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 4.5px;
+    top: 4.5px;
+
+    path{
+        height: 6.875px;
+    width: 10px;
+    left: 2.5px;
+    top: 3.75px;
+    border-radius: 0px;
+    }
+};
+
+.light{
+    &.selected{
+        background-color: var(--color-primary-base);
+        .CheckedIcone{
+            path{
+                stroke: var(--color-sky-white);
+            }
+        };
+        &:disabled{
+            background-color: var(--color-sky-light); 
+            .CheckedIcone{
+                path{
+                    stroke: var(--color-sky-lighter);
+                }
+            }
+        };
+    };
+    &.notSelected{
+        border: 1px solid var(--color-sky-base); 
+        .CheckedIcone{
+            path{
+                stroke: none;
+            }
+        };
+        &:disabled{
+            border: 1px solid var(--color-sky-light);
+            .CheckedIcone{
+                path{
+                    stroke: none;
+                }
+            }
+        };
+    };
+};
+
+.dark {
+    &.selected{
+        background-color: var(--color-primary-base); 
+        .CheckedIcone{
+            path{
+                stroke: var(--color-sky-white);
+            }
+        };
+        &:disabled{
+            background-color: var(--color-ink-darker);
+            .CheckedIcone{
+                path{
+                    stroke: var(--color-ink-dark);
+                }
+            }
+        };
+    };
+    &.notSelected{
+        border: 1px solid var(--color-ink-light);
+        .CheckedIcone{
+            path{
+                stroke: none;
+            }
+        };
+        &:disabled{
+            border: 1px solid var(--color-ink-dark);
+            .CheckedIcone{
+                path{
+                    stroke: none;
+                }
+            }
+        };
+    };
+};

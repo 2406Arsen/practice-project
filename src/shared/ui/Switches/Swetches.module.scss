@@ -1,0 +1,75 @@
+.Switches {
+    position: absolute;
+    width: 56px;
+    height: 32px;
+    border-radius: 32px;
+}
+.spanCircle{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: calc(50% - 28px/2);
+    border-radius: 50px;
+}
+.light{
+    &.selected{
+        background-color: var(--color-primary-base);
+        .spanCircle{
+            background-color: var(--color-sky-white); 
+            right: 2px;
+        }
+        &:disabled{
+            background: var(--color-sky-light); 
+            .spanCircle{
+                background-color: var(--color-sky-lighter); 
+                right: 2px;
+            }
+        }
+    };
+    &.notSelected{
+        background-color: var(--color-sky-light);
+        .spanCircle{
+            left: 2px;
+            background-color: var(--color-sky-white);
+        }
+        &:disabled{
+            background-color: var(--color-sky-white);
+            border: 1px solid var(--color-sky-light);
+            .spanCircle{
+                background-color: var(--color-sky-light);
+            }
+        }
+    };
+};
+
+.dark {
+    &.selected{
+        background-color: var(--color-primary-base);
+        .spanCircle{
+            background-color: var(--color-sky-white);
+            right: 2px;
+        }
+        &:disabled{
+            background-color: var(--color-ink-darker);
+            .spanCircle{
+                background-color: var(--color-ink-dark); 
+                right: 2px;
+            }
+        }
+    };
+    &.notSelected{
+        background-color: var(--color-ink-light); 
+        .spanCircle{
+            background-color: var(--color-sky-white); 
+            left: 2px;
+        }
+        &:disabled{
+            border: 1px solid var(--color-ink-dark); 
+            background-color: initial;
+            .spanCircle{
+                background-color: var(--color-ink-dark);
+                left: 2px;
+            }
+        }
+    };
+};
