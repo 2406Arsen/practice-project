@@ -6,11 +6,11 @@
 Part of "Segmented Controls" component
 */
 
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 28px;
-    left: 48px;
-    top: 48px;
 
     /* Sky/White */
 
@@ -24,11 +24,8 @@ Part of "Segmented Controls" component
         /* Segment */
 
 
-        position: absolute;
         width: 52px;
         height: 12px;
-        left: calc(50% - 52px/2);
-        top: calc(50% - 12px/2);
 
         /* Tiny/None/Medium */
 
@@ -55,11 +52,11 @@ Part of "Segmented Controls" component
 Part of "Segmented Controls" component
 */
 
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 28px;
-    left: 48px;
-    top: 48px;
 
     /* Sky/White */
 
@@ -70,11 +67,8 @@ Part of "Segmented Controls" component
         /* Segment */
 
 
-        position: absolute;
         width: 52px;
         height: 12px;
-        left: calc(50% - 52px/2);
-        top: calc(50% - 12px/2);
 
         /* Tiny/None/Medium */
 
@@ -103,12 +97,11 @@ Part of "Segmented Controls" component
 
 Part of "Segmented Controls" component
 */
-
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 160px;
     height: 28px;
-    left: 304px;
-    top: 48px;
 
     /* Ink/Dark */
 
@@ -121,12 +114,8 @@ Part of "Segmented Controls" component
     .DarkSeg {
         /* Segment */
 
-
-        position: absolute;
         width: 52px;
         height: 12px;
-        left: calc(50% - 52px/2);
-        top: calc(50% - 12px/2);
 
         /* Tiny/None/Medium */
 
@@ -148,44 +137,40 @@ Part of "Segmented Controls" component
     }
 }
 
-.DarkSegControlsOn{
+.DarkSegControlsOn {
     /* Mode=Dark, State=True
 
 Part of "Segmented Controls" component
 */
 
-position: absolute;
-width: 160px;
-height: 28px;
-left: 304px;
-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 28px;
 
-.DarkSegOn{
-    /* Segment */
+    .DarkSegOn {
+        /* Segment */
 
+        width: 52px;
+        height: 12px;
 
-position: absolute;
-width: 52px;
-height: 12px;
-left: calc(50% - 52px/2);
-top: calc(50% - 12px/2);
+        /* Tiny/None/Medium */
 
-/* Tiny/None/Medium */
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 12px;
-/* identical to box height, or 100% */
+        display: flex;
+        align-items: center;
+        text-align: center;
 
-display: flex;
-align-items: center;
-text-align: center;
+        /* Sky/Dark */
 
-/* Sky/Dark */
+        color: var(--color-sky-dark);
 
-color: var(--color-sky-dark);
-
-}
+    }
 }

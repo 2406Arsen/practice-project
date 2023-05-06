@@ -6,7 +6,7 @@ interface TabsProps {
 }
 
 const Tabs = (props: TabsProps) => {
-    const [state, isState] = useState(true);
+    const [state, setState] = useState(true);
     const {
         children
     } = props
@@ -16,16 +16,15 @@ const Tabs = (props: TabsProps) => {
             {state ?
                 <div className={styles.LightTab}
                     onClick={() => {
-                        isState(false);
+                        setState(false);
                     }}>
                     <div className={styles.LightTabText}>{children}</div>
                 </div> :
                 <div className={styles.LightTabOn}
                     onClick={() => {
-                        isState(true);
+                        setState(true);
                     }}>
                     <div className={styles.LightTabTextOn}>{children}</div>
-                    <div className={styles.LightIndicator}></div>
                 </div>
             }
         </>

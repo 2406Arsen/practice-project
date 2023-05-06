@@ -5,12 +5,12 @@
 
 Part of "Tab Bars" component
 */
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
 
-    position: absolute;
-    left: 10.86%;
-    right: 60.86%;
-    top: 21.43%;
-    bottom: 53.57%;
 
     /* Sky/White */
 
@@ -18,13 +18,9 @@ Part of "Tab Bars" component
 
     .LightTabBarsTitle {
         /* Title */
-
-
-        position: absolute;
         height: 12px;
-        left: 0px;
-        right: 0px;
-        top: calc(50% - 12px/2 + 14px);
+        width: 125px;
+
 
         /* Tiny/None/Regular */
 
@@ -39,14 +35,15 @@ Part of "Tab Bars" component
 
         /* Ink/Light */
 
-        color: #6C7072;
+        color: var(--color-ink-light);
 
 
     }
-    .LightTabBarsIcon{
+
+    .LightTabBarsIcon {
         position: relative;
-width: 32px;
-height: 32px;
+        width: 32px;
+        height: 32px;
 
     }
 }
@@ -56,13 +53,10 @@ height: 32px;
 
 Part of "Tab Bars" component
 */
-
-    position: absolute;
-    left: 10.86%;
-    right: 60.86%;
-    top: 53.57%;
-    bottom: 21.43%;
-
+    display: flex;
+    align-items: center;
+    height: 56px;
+    width: 125px;
     /* Sky/White */
 
     background: #FFFFFF;
@@ -70,12 +64,8 @@ Part of "Tab Bars" component
     .LightTabBarsTitleOn {
         /* Title */
 
-
-        position: absolute;
         height: 12px;
-        left: 0px;
-        right: 0px;
-        top: calc(50% - 12px/2 + 14px);
+        width: 125px;
 
         /* Tiny/None/Regular */
 
@@ -90,9 +80,87 @@ Part of "Tab Bars" component
 
         /* Primary/Base */
 
-        color: #6B4EFF;
+        color: var(--color-primary-base);
 
     }
 }
 
 //Dark
+
+.DarkTabBars {
+    
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px;
+
+
+
+    background: var(--color-ink-darker);
+
+    .DarkTabBarsTitle {
+        /* Title */
+        height: 12px;
+        width: 125px;
+
+
+        /* Tiny/None/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        color: #979C9E;
+
+
+    }
+
+    .DarkTabBarsIcon {
+        position: relative;
+        width: 32px;
+        height: 32px;
+
+    }
+}
+
+.DarkTabBarsOn {
+    /* Mode=Light, State=True
+
+Part of "Tab Bars" component
+*/
+    display: flex;
+    align-items: center;
+    height: 56px;
+    width: 125px;
+    /* Sky/White */
+
+    background: #202325;
+
+    .DarkTabBarsTitleOn {
+        /* Title */
+
+        height: 12px;
+        width: 125px;
+
+        /* Tiny/None/Regular */
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        /* identical to box height, or 100% */
+
+        text-align: center;
+
+        /* Primary/Base */
+
+        color: #FFFFFF
+    }
+}

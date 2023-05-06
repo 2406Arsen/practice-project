@@ -6,7 +6,7 @@ interface SegmentedControlsProps {
 }
 
 const SegmentedControls = (props: SegmentedControlsProps) => {
-    const [state, isState] = useState(true);
+    const [state, setState] = useState(true);
     const {
         children
     } = props
@@ -14,17 +14,17 @@ const SegmentedControls = (props: SegmentedControlsProps) => {
     return (
         <>
             {state ?
-                <div className={styles.DarkSegControls}
+                <div className={styles.LightSegControls}
                     onClick={() => {
-                        isState(false);
+                        setState(false);
                     }}>
-                    <div className={styles.DarkSeg}>{children}</div>
+                    <div className={styles.LightSeg}>{children}</div>
                 </div> :
-                <div className={styles.DarkSegControlsOn}
+                <div className={styles.LightSegControlsOn}
                     onClick={() => {
-                        isState(true);
+                        setState(true);
                     }}>
-                    <div className={styles.DarkSegOn}>{children}</div>
+                    <div className={styles.LightSegOn}>{children}</div>
                 </div>
             }
         </>

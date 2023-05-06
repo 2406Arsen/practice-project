@@ -7,15 +7,17 @@
 Part of "Tabs" component
 */
 
-width: 125px;
-height: 48px;
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
     /* Sky/White */
 
     background: #FFFFFF;
 
     .LightTabText {
         /* Tab Title */
-
+        width: 125px;
         height: 16px;
         /* Regular/None/Regular */
 
@@ -41,14 +43,17 @@ height: 48px;
 
 Part of "Tabs" component
 */
-width: 125px;
-height: 48px;
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
     /* Sky/White */
 
     background: #FFFFFF;
 
     .LightTabTextOn {
         /* Tab Title */
+        width: 125px;
         height: 16px;
 
 
@@ -89,9 +94,10 @@ height: 48px;
 
 Part of "Tabs" component
 */
-width: 125px;
-height: 48px;
-
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
     /* Ink/Darkest
 
 Master text
@@ -103,7 +109,7 @@ Master text
         /* Tab Title */
 
         height: 16px;
-  
+
         /* Regular/None/Regular */
 
         font-family: 'Inter';
@@ -127,8 +133,10 @@ Master text
 
 Part of "Tabs" component
 */
-width: 125px;
-height: 48px;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 48px;
     /* Ink/Darkest
 
 Master text
@@ -139,7 +147,7 @@ Master text
         /* Tab Title */
 
         height: 16px;
- 
+
         /* Regular/None/Regular */
 
         font-family: 'Inter';
@@ -158,7 +166,6 @@ Master text
 
     .DarkIndicator {
         /* indicator */
-
         height: 1px;
 
         /* Primary/Light */
