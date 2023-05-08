@@ -17,14 +17,7 @@ export enum ImageRatios {
 }
 
 const ImageRatio: FC<ImageRatioProps> = ({ ratio, source }) => {
-  return (
-    <div
-      style={{
-        backgroundImage: `url(${source})`,
-      }}
-      className={`${cls.img} ${cls[ratio]}`}
-    />
-  );
+  return <img className={`${cls.img} ${cls[ratio]}`} src={source} alt="" />;
 };
 
 export default ImageRatio;

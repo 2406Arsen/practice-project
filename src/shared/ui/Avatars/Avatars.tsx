@@ -16,12 +16,7 @@ export enum AvatarsSize {
 
 const Avatars: FC<AvatarsProps> = ({ source, size }) => {
   return (
-    <div
-      className={`${cls.userImage} ${cls[size]}`}
-      style={{
-        backgroundImage: `url('${source}')`,
-      }}
-    />
+    <img className={`${cls.userImage} ${cls[size]}`} src={source} alt="" />
   );
 };
 

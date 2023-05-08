@@ -8,10 +8,6 @@ import {
   ButtonTypes,
 } from "shared/ui/Buttons/ButtonIcon";
 import ImageRatio, { ImageRatios } from "shared/ui/ImageRatio/ImageRatio";
-import ToolTips, {
-  ToolTipsPosition,
-  TooltipsTypes,
-} from "shared/ui/Tooltips/Tooltips";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -28,13 +24,6 @@ const App = () => {
         ratio={ImageRatios.ONETOONE}
         source="https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=2000"
       />
-      {/* <ToolTips
-        text="Tooltip text "
-        position={ToolTipsPosition.BOTTOM}
-        type={TooltipsTypes.BASIC}
-      >
-        Text for tooltip
-      </ToolTips> */}
     </div>
   );
 };
