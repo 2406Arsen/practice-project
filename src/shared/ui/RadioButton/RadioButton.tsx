@@ -1,35 +1,44 @@
-import { FC, memo, useMemo } from "react";
+import { FC, memo, useMemo, useState } from "react";
 import { useTheme } from "providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './RadioButton.module.scss'
-import { ButtonState } from "../Switches/Switches";
 
 
 interface RadioButtonProps {
     disabled?: boolean;
-    state?: ButtonState;
 }
 
-const RadioButtons: React.FC<RadioButtonProps> = memo((props) => {
+const RadioButton: React.FC<RadioButtonProps> = memo((props) => {
+  const [ isSelected, setIsSelected ] = useState(false)
   const {
     disabled,
-    state = ButtonState.SELECTED
   } = props;
 
   const { theme } = useTheme();
   const mods = useMemo(() => ({}), []);
 
+  const Checker = () => {
+    return (
+      setIsSelected((selected) => !selected)
+      )
+  }
+
   return (
-    <button 
-        className={classNames(cls.RadioButtons, mods, [
-                cls[theme],
-                cls[state],
-            ])}
-            disabled={disabled}
-      >
-      <circle className={cls.CircleIcone}/>
-    </button>
+    <label 
+    className={classNames(cls.RadioButtons, mods, [
+            cls[theme],
+            cls[isSelected ? 'selected' : 'notSelected'],
+            cls[disabled ? 'disabled' : 'null']
+          ])}
+          >
+        <input 
+              type="radio" 
+              onClick= {Checker}
+              disabled= {disabled}
+              />
+        <circle className={cls.CircleIcone}/>
+    </label>
   );
 });
 
-export default RadioButtons;
+export default RadioButton;

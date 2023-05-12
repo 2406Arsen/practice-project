@@ -1,41 +1,59 @@
+
+.Switches input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.slider:before {
+    width: 28px;
+    height: 28px;
+    border-radius: 50px;
+    display: flex;
+    content: "";
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(24px);
+}
+
 .Switches {
-    position: absolute;
+    box-sizing: border-box;
+    padding: 2px;
     width: 56px;
     height: 32px;
     border-radius: 32px;
-}
-.spanCircle{
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    top: calc(50% - 28px/2);
-    border-radius: 50px;
-}
-.light{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    
     &.selected{
         background-color: var(--color-primary-base);
-        .spanCircle{
+        .slider:before{
             background-color: var(--color-sky-white); 
-            right: 2px;
         }
-        &:disabled{
+        &.disabled{
             background: var(--color-sky-light); 
-            .spanCircle{
+            .slider:before{
                 background-color: var(--color-sky-lighter); 
-                right: 2px;
             }
         }
     };
     &.notSelected{
         background-color: var(--color-sky-light);
-        .spanCircle{
-            left: 2px;
+        .slider:before{
             background-color: var(--color-sky-white);
         }
-        &:disabled{
+        &.disabled{
             background-color: var(--color-sky-white);
             border: 1px solid var(--color-sky-light);
-            .spanCircle{
+            .slider:before{
                 background-color: var(--color-sky-light);
             }
         }
@@ -45,30 +63,26 @@
 .dark {
     &.selected{
         background-color: var(--color-primary-base);
-        .spanCircle{
+        .slider:before{
             background-color: var(--color-sky-white);
-            right: 2px;
         }
-        &:disabled{
+        &.disabled{
             background-color: var(--color-ink-darker);
-            .spanCircle{
+            .slider:before{
                 background-color: var(--color-ink-dark); 
-                right: 2px;
             }
         }
     };
     &.notSelected{
         background-color: var(--color-ink-light); 
-        .spanCircle{
+        .slider:before{
             background-color: var(--color-sky-white); 
-            left: 2px;
         }
-        &:disabled{
+        &.disabled{
             border: 1px solid var(--color-ink-dark); 
             background-color: initial;
-            .spanCircle{
+            .slider:before{
                 background-color: var(--color-ink-dark);
-                left: 2px;
             }
         }
     };

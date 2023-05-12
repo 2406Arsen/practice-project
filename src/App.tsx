@@ -6,12 +6,10 @@ import {
   ButtonSize,
   ButtonTypes,
 } from "shared/ui/Buttons/ButtonIcon";
-
-
-import Switches, { ButtonState } from "shared/ui/Switches/Switches";
-import Checkboxes from "shared/ui/Checkboxes/Checkboxes";
-import Steppers from "shared/ui/Steppers/Steppers";
-import RadioButtons from "shared/ui/RadioButton/RadioButton";
+import Checkbox from "shared/ui/Checkbox/Checkbox";
+import RadioButton from "shared/ui/RadioButton/RadioButton";
+import Stepper from "shared/ui/Stepper/Stepper";
+import Switch from "shared/ui/Switch/Switch";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,10 +18,10 @@ const App = () => {
       <button onClick={toggleTheme}>toggle theme</button>
       <Component />
       <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY}  disabled/>
-      <Switches state={ButtonState.SELECTED} disabled/>
-      {/* <RadioButtons state={ButtonState.SELECTED}  disabled/> */}
-      {/* <Checkboxes  state={ButtonState.NOT_SELECTED} disabled/> */}
-      {/* <Steppers size={ButtonSize.LARGE}/> */}
+      <Switch />
+      <RadioButton />
+      <Checkbox />
+      <Stepper size={ButtonSize.SMALL}/>
     </div>
   );
 };

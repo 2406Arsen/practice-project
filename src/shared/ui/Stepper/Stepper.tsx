@@ -1,42 +1,49 @@
-import { ButtonState } from "../Switches/Switches";
-import { FC, memo, useMemo } from "react";
+import { FC, memo, useMemo, useState } from "react";
 import { useTheme } from "providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import { ReactComponent as  Mathminus} from "../../assets/icons/math-minus.svg";
 import { ReactComponent as  Mathmplus} from "../../assets/icons/math-plus.svg";
 import { ButtonSize } from "../Buttons/ButtonIcon";
-import cls from './Steppers.module.scss'
+import cls from './Stepper.module.scss'
 
 
 interface SteppersProps{
     disabled?: boolean,
-    state?: ButtonState,
     size?: ButtonSize,
 }
 
-const Steppers: React.FC<SteppersProps> = memo((props) => {
+const Stepper: React.FC<SteppersProps> = memo((props) => { 
+    const [count, setCount]=useState(0)
     const {
         disabled,
-        state = ButtonState.SELECTED,
         size = ButtonSize.LARGE,
     } = props;
 
     const { theme } = useTheme()
     const mods = useMemo(() => ({}), [])
 
+    const handleIncrement = () => setCount(()=> count +1 )
+    const handleDecrement = () => count ? setCount(()=> count-1) : 0
+
     return(
         <div
-            className={classNames(cls.Steppers, mods, [
+            className={classNames(cls.Stepper, mods, [
                 cls[theme],
-                cls[state],
                 cls[size],
             ])}
             >
-            <Mathminus className={cls.minus}/>
-            <span className={cls.count}>0</span>
-            <Mathmplus className={cls.plus}/>
+            <Mathminus 
+                className={cls.minus}
+                onClick={handleDecrement}
+            />
+            <span className={cls.count}>{count}</span>
+            <Mathmplus 
+                className={cls.plus}
+                onClick={handleIncrement}
+            />
+
         </div>
     )
 });
 
-export default Steppers;
+export default Stepper;
