@@ -1,6 +1,7 @@
 import { Component } from "components/Component";
 import { useTheme } from "providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
+import Avatars, { AvatarsSize } from "shared/ui/Avatars/Avatars";
 import {
   ButtonIcon,
   ButtonSize,
@@ -17,11 +18,11 @@ const App = () => {
     <div className={classNames("App", {}, [theme])}>
       <button onClick={toggleTheme}>toggle theme</button>
       <Component />
-      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY}  disabled/>
-      <Switch />
-      <RadioButton />
-      <Checkbox />
-      <Stepper size={ButtonSize.SMALL}/>
+      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} disabled />
+      <Switch disabled/>
+      <RadioButton disabled/>
+      <Checkbox disabled/>
+      <Stepper size={ButtonSize.LARGE}/>
     </div>
   );
 };
