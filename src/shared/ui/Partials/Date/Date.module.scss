@@ -1,0 +1,80 @@
+//Light
+.LightActiveDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+    background: var(--color-primary-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .LightActiveDateNumber {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--color-sky-white);
+    }
+}
+
+.LightDefaultDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+    background: var(--color-sky-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .LightDefaultDateNumber {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--color-ink-darkest);
+    }
+
+}
+
+//Dark
+
+.DarkActiveDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+    background: var(--color-primary-base);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .DarkActiveDateNumber {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--color-sky-white);
+    }
+}
+
+.DarkDefaultDate {
+    height: 40px;
+    width: 40px;
+    border-radius: 80px;
+    background: var(--color-ink-darkest);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .DarkDefaultDateNumber {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 40px;
+        text-align: center;
+        color: var(--color-sky-white);
+    }
+
+}

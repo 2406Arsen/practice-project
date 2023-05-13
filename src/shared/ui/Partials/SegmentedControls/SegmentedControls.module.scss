@@ -1,0 +1,93 @@
+//Light
+
+.Segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 28px;
+    background: var(--color-sky-white);
+    box-shadow: var(--box-shadow-small);
+    border-radius: 6px;
+    .SegmentContent {
+        width: 52px;
+        height: 12px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        color: var(--color-ink-darkest);
+    }
+}
+
+.SetSegment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 28px;
+    background: var(--color-sky-white);
+    border-radius: 6px;
+    .SetSegmentContent {
+        width: 52px;
+        height: 12px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        color: var(--color-ink-light);
+    }
+}
+
+
+//Dark
+.DarkSegment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 28px;
+    background: var(--color-ink-dark);
+    box-shadow: var(--box-shadow-small);
+    border-radius: 6px;
+    .DarkSegmentContent {
+        width: 52px;
+        height: 12px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        color: var(--color-sky-white);
+    }
+}
+
+.DarkSetSegment{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 28px;
+    box-shadow: var(--box-shadow-small);
+    border-radius: 6px;
+    .DarkSetSegmentContent {
+        width: 52px;
+        height: 12px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 12px;
+        align-items: center;
+        text-align: center;
+        color: var(--color-sky-dark);
+    }
+}
