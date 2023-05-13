@@ -10,6 +10,10 @@ import {
   ButtonSize,
   ButtonTypes,
 } from "shared/ui/Buttons/ButtonIcon";
+import PhoneeInput from "shared/ui/PhoneInput/PhoneeInput";
+import SelectInput from "shared/ui/SelectInput/SelectInput";
+import TextFields, { TextFieldsState } from "shared/ui/TextFields/TextFields";
+import Tooltip from "shared/ui/ToolTips/ToolTips";
 import ImageRatio, { ImageRatios } from "shared/ui/ImageRatio/ImageRatio";
 import Snackbars, {
   SnackbarsActions,
@@ -19,6 +23,22 @@ import PopApp from "shared/ui/Popapp/Pop-up";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
+  const [value, setValue] = useState("");
+  const [value2, setValue2] = useState("");
+  const [value3, setValue3] = useState("");
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+  };
+
+  const handleChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue2(event.target.value);
+  };
+
+  const handleChange3 = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue3(event.target.value);
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => {
     setIsOpen(false);
@@ -70,6 +90,39 @@ const App = () => {
       <Button mode="Primary" size="large" state={'Default'} type="button"  >
         Button
       </Button>
+      <TextFields
+        state={TextFieldsState.FOCUSED}
+        onChange={handleChange}
+        onChange2={handleChange2}
+        label=" Text Label "
+        value={value}
+        value2={value2}
+        placeholder1="Placeholer text"
+        placeholder2="Search location"
+        icon
+        // error
+      />
+      <PhoneeInput
+        state={TextFieldsState.FOCUSED}
+        onChange3={handleChange3}
+        label=" Text Label "
+        value3={value3}
+        // error
+      />
+      <SelectInput
+        state={TextFieldsState.FOCUSED}
+        label=" Text Label "
+        // error
+      />
+
+      <Tooltip 
+          position="top" 
+          text="Tap to manage" 
+          // onClose={() => ""}
+          linkHref="Link"
+        >
+        Hover
+      </Tooltip>
     </div>
   );
 };

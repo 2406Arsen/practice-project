@@ -1,0 +1,157 @@
+.TextFieldsWrapper {
+  display: flex;
+  flex-direction: column;
+
+  .TextFieldsLabel {
+    margin: 5px 0 4px 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-ink-darkest) !important
+  }
+
+  .TextFields {
+    width: 327px;
+    height: 48px;
+    margin: 8px;
+    border-radius: 8px;
+    padding: 8px !important;
+    padding-left: 30px !important;
+    font-size: var(--typography-regular-none) !important;
+
+    &.default {
+      border-color: var(--color-sky-light) !important;
+      background-color: var(--color-sky-white) !important;
+      color: var(--color-ink-lighter) !important;
+    }
+
+    &.focused {
+      border-color: var(--color-primary-base) !important;
+      background-color: var(--color-sky-white) !important;
+      color: var(--color-ink-darkest) !important;
+    }
+
+    &.filled {
+      border-color: var(--color-sky-light) !important;
+      background-color: var(--color-sky-white) !important;
+      color: var(--color-ink-darkest) !important;
+    }
+
+    &.error {
+      border-color: var(--color-red-base) !important;
+      background-color: var(--color-sky-white) !important;
+      color: var(--color-ink-darkest) !important;
+    }
+
+    &.disabled {
+      border-color: var(--color-sky-lighter) !important;
+      background-color: var(--color-sky-lightest) !important;
+      color: var(--color-sky-base) !important;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .TextFieldErrorText {
+    font-size: var(--typography-regular-none);
+    color: var(--color-red-base);
+    margin: 8px;
+  }
+
+  .TextFieldsCaption {
+    font-size: var(--typography-regular-none);
+    color: var(--color-ink-light);
+    font-size: 14px;
+    margin: 8px;
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    left: 17px;
+    bottom: 30px;
+    // bottom: 60px; errori depqum
+    fill: var(--color-sky-dark) !important;
+  }
+}
+
+
+// --- dark mod ---
+
+.dark {
+
+  .TextFieldsLabel {
+    margin: 8px 0 4px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-sky-white) !important;
+  }
+
+  &.TextFields {
+    width: 327px;
+    height: 48px;
+    margin: 8px;
+    border-radius: 8px;
+    padding: 8px !important;
+    padding-left: 30px !important;
+    font-size: var(--typography-regular-none) !important;
+
+    &.default {
+      border-color: var(--color-ink-dark) !important;
+      background-color: var(--color-ink-darkest) !important;
+      color: var(--color-sky-dark) !important
+    }
+
+    &.focused {
+      border-color: var(--color-primary-base) !important;
+      background-color: var(--color-ink-darkest) !important;
+      color: var(--color-sky-white) !important
+    }
+
+    &.filled {
+      border-color: var(--color-ink-dark) !important;
+      background-color: var(--color-ink-darkest) !important;
+      color: var(--color-sky-dark) !important
+    }
+
+    &.error {
+      border-color: var(--color-red-base) !important;
+      background-color: var(--color-ink-darkest) !important;
+      color: var(--color-sky-white) !important
+    }
+
+    &.disabled {
+      border-color: var(--color-ink-darker) !important;
+      background-color: var(--color-ink-darker) !important;
+      color: var(--color-ink-base) !important;
+      cursor: not-allowed !important;
+    }
+
+  }
+
+  &.TextFieldErrorText {
+    font-size: var(--typography-regular-none);
+    color: var(--color-red-base);
+    margin: 8px;
+  }
+
+  &.TextFieldsCaption {
+    font-size: var(--typography-regular-none);
+    color: var(--color-sky-dark);
+    font-size: 14px;
+    margin: 8px;
+  }
+
+
+  .columns .icon {
+    position: absolute;
+    left: 17px;
+    bottom: 30px;
+    // bottom: 60px; errori depqum
+    fill: var(--color-ink-darkest) !important;
+  }
+
+}
