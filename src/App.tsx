@@ -4,6 +4,7 @@ import { useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import Avatars, { AvatarsSize } from "shared/ui/Avatars/Avatars";
 import Button from "shared/ui/Buttons/Button/Button";
+import ProgressBar from "shared/ui/ProgressBar/ProgressBar";
 import {
   ButtonIcon,
   ButtonSize,
@@ -28,9 +29,9 @@ const App = () => {
 
   return (
     <div className={classNames("App", {}, [theme])}>
-      <button onClick={toggleTheme}>toggle theme</button>
-      <Component />
-      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} />
+      {/* <button onClick={toggleTheme}>toggle theme</button>
+      <Component /> */}
+      {/* <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} />
       <Button mode="Primary" size="large" state="Default" type="button" onClick={handleOpen} >open Pop-up</Button>
       {
         isOpen ?
@@ -41,9 +42,12 @@ const App = () => {
             image
             imageSize="small"
 
-          />
-          : null
-      }
+          /> */}
+      <ProgressBar />
+      <ProgressBar />
+      <ProgressBar />
+      <ProgressBar />
+      <ProgressBar />
 
       <Avatars
         size={AvatarsSize.LARGE}
