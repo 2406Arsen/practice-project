@@ -29,9 +29,9 @@ const App = () => {
 
   return (
     <div className={classNames("App", {}, [theme])}>
-      {/* <button onClick={toggleTheme}>toggle theme</button>
-      <Component /> */}
-      {/* <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} />
+      <button onClick={toggleTheme}>toggle theme</button>
+      <Component />
+      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} />
       <Button mode="Primary" size="large" state="Default" type="button" onClick={handleOpen} >open Pop-up</Button>
       {
         isOpen ?
@@ -42,7 +42,8 @@ const App = () => {
             image
             imageSize="small"
 
-          /> */}
+          /> : null
+      }
       <ProgressBar />
       <ProgressBar />
       <ProgressBar />
