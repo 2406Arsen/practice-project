@@ -1,0 +1,97 @@
+//Light
+
+.LightTab {
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-sky-white);
+    .LightTabTitle {
+        width: 125px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: var(--color-ink-lighter);
+    }
+}
+
+.LightTabOn {
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-sky-white);
+    .LightTabTitleOn {
+        width: 125px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: var(--color-primary-base);
+    }
+}
+.LightTabIndicator {
+    height: 1px;
+    width: 125px;
+    background: var(--color-primary-base);
+    border-radius: 2px;
+}
+
+//Dark
+
+.DarkTab {
+    width: 125px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-ink-darkest);
+    .DarkTabTitle {
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: var(--color-sky-dark);
+    }
+}
+
+.DarkTabOn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 125px;
+    height: 48px;
+    background: var(--color-ink-darkest);
+    .DarkTabTitleOn {
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: var(--color-primary-light);
+    }
+}
+.DarkTabIndicator {
+    height: 1px;
+    width: 125px;
+    background: var(--color-primary-light);
+    border-radius: 2px;
+}
