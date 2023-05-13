@@ -1,0 +1,157 @@
+.wrapper {
+    position: relative;
+}
+
+.target {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 35px;
+    box-sizing: border-box;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        border-radius: 4px;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+    }
+}
+
+.centerContainer {
+    position: absolute;
+}
+
+.tooltipBox {
+    position: relative;
+    color: var(--color-ink-darkest);
+    background-color: var(--color-sky-white);
+    box-shadow: var(--box-shadow-medium);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: var(--typography-regular-normal);
+    line-height: 1.5;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    &::after {
+        content: "";
+        position: absolute;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.closeButton {
+    padding-left: 35px;
+    color: var(--color-sky-dark);
+}
+
+.tooltipLink {
+    padding-left: 15px;
+    color: var(--color-primary-base);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-sky-dark) !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dark {
+    .target {
+        color: var(--color-sky-white);
+    }
+}
+
+
+
+// &.top {
+//     margin-bottom: 8px;
+
+//     &::after {
+//         right: 50%;
+//         margin-right: -6px;
+//         bottom: 100%;
+//         box-shadow: var(--box-shadow-medium);
+//         border-color: var(--color-sky-white) transparent transparent transparent;
+//     }
+
+//     &::before {
+//         top: 100%;
+//         clip-path: polygon(50% 0%, 0% 0%, 100% 0%);
+//     }
+// }
+
+// &.right {
+//     margin-left: 8px;
+
+//     &::after {
+//         right: auto; /* remove the 'right' property */
+//         left: -12px; /* add a 'left' property instead */
+//         border-color: transparent transparent transparent var(--color-sky-white); /* adjust the border color accordingly */
+//       }
+
+//       &::before {
+//         right: auto; /* remove the 'right' property */
+//         left: -5px; /* add a 'left' property instead */
+//         transform: translate(50%, -50%); /* adjust the transform accordingly */
+//         clip-path: polygon(0% 0%, 100% 50%, 0% 100%); /* adjust the clip-path accordingly */
+//       }
+// }
+
+// &.bottom {
+//     margin-top: 8px;
+
+//     &::after {
+//         right: 50%;
+//         margin-right: -6px;
+//         /* This will center the arrow horizontally */
+//         top: 100%;
+//         box-shadow: var(--box-shadow-medium);
+//         border-color: transparent transparent var(--color-sky-white) transparent;
+//     }
+
+//     &::before {
+//         bottom: 100%;
+//         clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+//     }
+// }
+
+// &.left {
+//     margin-right: 8px;
+
+//     &::after {
+//         right: -12px;
+//         top: 50%;
+//         margin-top: -6px;
+//         box-shadow: var(--box-shadow-medium);
+//         border-color: transparent transparent transparent var(--color-sky-white);
+//     }
+
+//     &::before {
+//         right: -5px;
+//         top: 50%;
+//         transform: translate(50%, -50%);
+//         clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+//     }
+// }

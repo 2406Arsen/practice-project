@@ -1,0 +1,101 @@
+.div {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .SelectInputLabel {
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-ink-darkest)
+    }
+
+    .SelectInput {
+        width: 327px;
+        height: 48px;
+        border-radius: 8px;
+        padding: 8px !important;
+        padding-left: 30px !important;
+        font-size: var(--typography-regular-none) !important;
+
+        &.default {
+            border: 2px solid  var(--color-sky-light) !important;
+            background-color: var(--color-sky-white) !important;
+            color: var(--color-ink-lighter) !important;
+        }
+
+        &.focused {
+            border: 2px solid var(--color-primary-base) !important;
+            background-color: var(--color-sky-white) !important;
+            color: var(--color-ink-darkest) !important;
+        }
+
+        &.filled {
+            border-color: var(--color-sky-light) !important;
+            background-color: var(--color-sky-white) !important;
+            color: var(--color-ink-darkest) !important;
+        }
+
+        &.error {
+            border: 2px solid  var(--color-red-base) !important;
+            background-color: var(--color-sky-white) !important;
+            color: var(--color-ink-darkest) !important;
+        }
+
+        &.disabled {
+            border: 2px solid  var(--color-sky-lighter) !important;
+            background-color: var(--color-sky-lightest) !important;
+            color: var(--color-sky-base) !important;
+            cursor: not-allowed !important;
+        }
+    }
+
+    .SelectInputErrorText {
+        font-size: var(--typography-regular-none);
+        color: var(--color-red-base);
+        margin: 8px;
+    }
+}
+
+
+.dark {
+    .SelectInputLabel {
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color-sky-white)
+    }
+
+    &.SelectInput {
+        &.default {
+            border: 2px solid  var(--color-ink-dark) !important;
+            background-color: var(--color-ink-darkest) !important;
+            color: var(--color-sky-dark) !important
+        }
+
+        &.focused {
+            border: 2px solid  var(--color-primary-base) !important;
+            background-color: var(--color-ink-darkest) !important;
+            color: var(--color-sky-white) !important
+        }
+
+        &.filled {
+            border: 2px solid  var(--color-ink-dark) !important;
+            background-color: var(--color-ink-darkest) !important;
+            color: var(--color-sky-dark) !important
+        }
+
+        &.error {
+            border: 2px solid  var(--color-red-base) !important;
+            background-color: var(--color-ink-darkest) !important;
+            color: var(--color-sky-white) !important
+        }
+
+        &.disabled {
+            border: 2px solid  var(--color-ink-darker) !important;
+            background-color: var(--color-ink-darker) !important;
+            color: var(--color-ink-base) !important;
+            cursor: not-allowed !important;
+        }
+    }
+}
