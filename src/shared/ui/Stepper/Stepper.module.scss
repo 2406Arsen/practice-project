@@ -1,0 +1,80 @@
+.Stepper {
+    box-sizing: border-box;
+    border-radius: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &.large {
+        width: 124px;
+        height: 48px;
+      };
+      &.small {
+        width: 100px;
+        height: 32px;
+      };
+
+    .count{
+        width: 12px;
+        height: 16px;
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+    };
+
+    .minus, .plus{
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;    
+    };
+    .minus{
+        left: 16px;
+    };
+    .plus{
+        right: 16px;
+    };
+
+    border: 1px solid var(--color-sky-light);
+    .minus{
+        path{
+            stroke: var(--color-sky-base);
+        }
+    };
+    .minus:hover{
+        path {
+            stroke: var(--color-primary-base);
+        } 
+    };
+    .plus{
+        border: 1.5px var(--color-primary-base); 
+        path {
+        stroke: var(--color-primary-base);
+        }
+    };
+};
+
+
+.dark {
+    border: 1px solid var(--color-ink-dark);
+    .minus{
+        path{
+            stroke: var(--color-ink-dark);
+        }
+    };
+    .minus:hover{
+        path {
+            stroke: var(--color-primary-base);
+        } 
+    };
+    .plus{
+        path {
+        stroke: var(--color-primary-light);
+        }
+    };
+    .count{
+        color: var(--color-sky-white)
+    };
+};
