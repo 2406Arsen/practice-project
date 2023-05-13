@@ -1,0 +1,92 @@
+.wrapper {
+  margin-left: 500px;
+  width: 327px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-ink-darkest);
+  padding: 5px;
+  min-height: 48px;
+
+  &.dark {
+    background-color: var(--color-primary-base);
+  }
+
+  &.box {
+    border-radius: 8px;
+  }
+
+  .iconDiv {
+    margin: auto;
+    flex: 2;
+
+    & * {
+      stroke: var(--color-sky-white);
+    }
+
+    .leftIcon {
+      stroke: var(--color-sky-white);
+      margin-top: 8px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .actionIcon {
+      stroke: var(--color-sky-white);
+      margin-top: 8px;
+      margin-right: 10px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  .snackTextDiv {
+    color: var(--color-sky-white);
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    flex: 6;
+    overflow-x: hidden;
+
+    .snackbarText,
+    .forCaptionText {
+      word-wrap: break-word;
+      margin: auto;
+      margin-left: 4px;
+    }
+
+    .forCaptionText {
+      cursor: pointer;
+      color: var(--color-sky-dark);
+      margin-bottom: 8px;
+
+      &.dark {
+        color: var(--color-primary-lighter);
+      }
+    }
+
+    .input {
+      outline: none;
+      border: none;
+      margin-left: 4px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+    }
+  }
+
+  .actionTextDiv {
+    color: var(--color-sky-white);
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .actionBtn {
+      cursor: pointer;
+      padding: 5px;
+    }
+  }
+
+  .actionIconDiv {
+    display: flex;
+    flex: 1;
+  }
+}

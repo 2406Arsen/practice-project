@@ -1,0 +1,36 @@
+.img {
+  &.oneToOne {
+    width: 120px;
+    height: 120px;
+  }
+
+  &.threeToTwo {
+    width: 160px;
+    height: 120px;
+  }
+
+  &.fourToThree {
+    width: 180px;
+    height: 120px;
+  }
+
+  &.sixteenToNine {
+    width: 213px;
+    height: 120px;
+  }
+
+  &.twoToThree {
+    width: 120px;
+    height: 160px;
+  }
+
+  &.threeToFour {
+    width: 120px;
+    height: 180px;
+  }
+
+  &.nineToSixteen {
+    width: 120px;
+    height: 213px;
+  }
+}
