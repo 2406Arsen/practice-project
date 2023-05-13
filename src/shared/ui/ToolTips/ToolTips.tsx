@@ -2,10 +2,9 @@ import { FC, useMemo, useState } from "react";
 import cls from "./Tooltip.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "providers/ThemeProvider";
-import TooltipWithStyle from "./getStyleFromPosition";
+import { getStyleFromPosition } from "./getStyleFromPosition";
 import { ReactComponent as Close } from "../../assets/icons/close.svg";
-
-export interface TooltipProps {
+interface TooltipProps {
   position: "top" | "right" | "bottom" | "left";
   text: string;
   children: React.ReactNode;
@@ -26,9 +25,9 @@ const Tooltip: FC<TooltipProps> = (props) => {
   const mods = useMemo(() => ({}), []);
 
   const tooltipClasses = classNames(cls.wrapper, mods, [
-    className, 
+    className,
     cls[theme]]
-    );
+  );
 
   return (
     <div className={tooltipClasses}>
@@ -45,7 +44,7 @@ const Tooltip: FC<TooltipProps> = (props) => {
         <div
           className={cls.centerContainer}
           data-position={position}
-          style={TooltipWithStyle(position)}
+          style={getStyleFromPosition(position)}
         >
           <div className={cls.tooltipBoxWrapper}>
             <div className={cls.tooltipBox}>
@@ -57,11 +56,11 @@ const Tooltip: FC<TooltipProps> = (props) => {
                   </a>
                 )}
               </span>
-                {onClose && (
-                  <button className={cls.closeButton} onClick={onClose}>
-                    <Close className={cls.icon} />
-                  </button>
-                )}
+              {onClose && (
+                <button className={cls.closeButton} onClick={onClose}>
+                  <Close className={cls.icon} />
+                </button>
+              )}
             </div>
           </div>
         </div>

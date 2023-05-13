@@ -91,7 +91,7 @@ const App = () => {
         Button
       </Button>
       <TextFields
-        state={TextFieldsState.FOCUSED}
+        state={TextFieldsState.DEFAULT}
         onChange={handleChange}
         onChange2={handleChange2}
         label=" Text Label "
@@ -112,6 +112,7 @@ const App = () => {
       <SelectInput
         state={TextFieldsState.FOCUSED}
         label=" Text Label "
+        
         // error
       />
 

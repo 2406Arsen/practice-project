@@ -62,8 +62,8 @@ const TextFields: FC<TextFieldsProps> = memo((props) => {
   };
 
   return (
-    <div className={classNames(cls.TextFieldsWrapper)}>
-      
+    <div className={classNames(cls.TextFieldsWrapper, {}, [cls[theme]])}>
+
       <div className={cls.columns}>
         {label && <label className={cls.TextFieldsLabel}>{label}</label>}
         <input
@@ -80,15 +80,17 @@ const TextFields: FC<TextFieldsProps> = memo((props) => {
       </div>
 
       <div className={cls.columns}>
-        {label && <label className={cls.TextFieldsLabel}>{label}</label>}
+        {label && <label className={cls.TextFieldsLabel}>{label}
 
-        {icon && iconPosition === "left" && <LocationIcon className={cls.icon} />}
-        <input
-          className={inputClasses}
-          placeholder={placeholder2}
-          value={value2}
-          onChange={handleInputChange2}
-        />
+
+          {icon && iconPosition === "left" && <LocationIcon className={cls.icon} />}
+          <input
+            className={inputClasses}
+            placeholder={placeholder2}
+            value={value2}
+            onChange={handleInputChange2}
+          />
+        </label>}
 
         {value2 && !error && (
           <div className={cls.TextFieldsCaption}>Caption 2</div>

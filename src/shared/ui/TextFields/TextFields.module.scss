@@ -6,7 +6,10 @@
     margin: 5px 0 4px 8px;
     font-size: 16px;
     font-weight: 700;
-    color: var(--color-ink-darkest) !important
+    color: var(--color-ink-darkest) ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .TextFields {
@@ -14,39 +17,38 @@
     height: 48px;
     margin: 8px;
     border-radius: 8px;
-    padding: 8px !important;
-    padding-left: 30px !important;
-    font-size: var(--typography-regular-none) !important;
+    padding: 8px 8px 8px 30px;
+    font-size: var(--typography-regular-none);
 
     &.default {
-      border-color: var(--color-sky-light) !important;
-      background-color: var(--color-sky-white) !important;
-      color: var(--color-ink-lighter) !important;
+      border-color: var(--color-sky-light);
+      background-color: var(--color-sky-white);
+      color: var(--color-ink-lighter);
     }
 
     &.focused {
-      border-color: var(--color-primary-base) !important;
-      background-color: var(--color-sky-white) !important;
-      color: var(--color-ink-darkest) !important;
+      border-color: var(--color-primary-base) ;
+      background-color: var(--color-sky-white) ;
+      color: var(--color-ink-darkest) ;
     }
 
     &.filled {
-      border-color: var(--color-sky-light) !important;
-      background-color: var(--color-sky-white) !important;
-      color: var(--color-ink-darkest) !important;
+      border-color: var(--color-sky-light) ;
+      background-color: var(--color-sky-white) ;
+      color: var(--color-ink-darkest) ;
     }
 
     &.error {
-      border-color: var(--color-red-base) !important;
-      background-color: var(--color-sky-white) !important;
-      color: var(--color-ink-darkest) !important;
+      border-color: var(--color-red-base) ;
+      background-color: var(--color-sky-white) ;
+      color: var(--color-ink-darkest) ;
     }
 
     &.disabled {
-      border-color: var(--color-sky-lighter) !important;
-      background-color: var(--color-sky-lightest) !important;
-      color: var(--color-sky-base) !important;
-      cursor: not-allowed !important;
+      border-color: var(--color-sky-lighter) ;
+      background-color: var(--color-sky-lightest) ;
+      color: var(--color-sky-base) ;
+      cursor: not-allowed ;
     }
   }
 
@@ -74,7 +76,7 @@
     left: 17px;
     bottom: 30px;
     // bottom: 60px; errori depqum
-    fill: var(--color-sky-dark) !important;
+    fill: var(--color-sky-dark) ;
   }
 }
 
@@ -87,7 +89,7 @@
     margin: 8px 0 4px 8px;
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-sky-white) !important;
+    color: var(--color-sky-white) ;
   }
 
   &.TextFields {
@@ -95,39 +97,39 @@
     height: 48px;
     margin: 8px;
     border-radius: 8px;
-    padding: 8px !important;
-    padding-left: 30px !important;
-    font-size: var(--typography-regular-none) !important;
+    padding: 8px ;
+    padding-left: 30px ;
+    font-size: var(--typography-regular-none) ;
 
     &.default {
-      border-color: var(--color-ink-dark) !important;
-      background-color: var(--color-ink-darkest) !important;
-      color: var(--color-sky-dark) !important
+      border-color: var(--color-ink-dark) ;
+      background-color: var(--color-ink-darkest) ;
+      color: var(--color-sky-dark) 
     }
 
     &.focused {
-      border-color: var(--color-primary-base) !important;
-      background-color: var(--color-ink-darkest) !important;
-      color: var(--color-sky-white) !important
+      border-color: var(--color-primary-base) ;
+      background-color: var(--color-ink-darkest) ;
+      color: var(--color-sky-white) 
     }
 
     &.filled {
-      border-color: var(--color-ink-dark) !important;
-      background-color: var(--color-ink-darkest) !important;
-      color: var(--color-sky-dark) !important
+      border-color: var(--color-ink-dark) ;
+      background-color: var(--color-ink-darkest) ;
+      color: var(--color-sky-dark) 
     }
 
     &.error {
-      border-color: var(--color-red-base) !important;
-      background-color: var(--color-ink-darkest) !important;
-      color: var(--color-sky-white) !important
+      border-color: var(--color-red-base) ;
+      background-color: var(--color-ink-darkest) ;
+      color: var(--color-sky-white) 
     }
 
     &.disabled {
-      border-color: var(--color-ink-darker) !important;
-      background-color: var(--color-ink-darker) !important;
-      color: var(--color-ink-base) !important;
-      cursor: not-allowed !important;
+      border-color: var(--color-ink-darker) ;
+      background-color: var(--color-ink-darker) ;
+      color: var(--color-ink-base) ;
+      cursor: not-allowed ;
     }
 
   }
@@ -151,7 +153,7 @@
     left: 17px;
     bottom: 30px;
     // bottom: 60px; errori depqum
-    fill: var(--color-ink-darkest) !important;
+    fill: var(--color-ink-darkest) ;
   }
 
 }
