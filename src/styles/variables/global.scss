@@ -1,111 +1,110 @@
 :root {
-    --font-family-main: "Courier New", "Times New Roman", serif;
-    --font-size-m: 16px;
-    --font-line-m: 24px;
-    --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+  --font-family-main: "Courier New", "Times New Roman", serif;
+  --font-size-m: 16px;
+  --font-line-m: 24px;
+  --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
 
+  //* ============== colors ==============
 
-    //* ============== colors ==============
+  //? ============== INK ==============
 
-    //? ============== INK ==============
+  --color-ink-lighter: #72777a;
+  --color-ink-light: #6c7072;
+  --color-ink-base: #404446;
+  --color-ink-dark: #303437;
+  --color-ink-darker: #202325;
+  --color-ink-darkest: #090a0a;
 
-    --color-ink-lighter: #72777A;
-    --color-ink-light: #6C7072;
-    --color-ink-base: #404446;
-    --color-ink-dark: #303437;
-    --color-ink-darker: #202325;
-    --color-ink-darkest: #090A0A;
+  //? ============== SKY ==============
 
-    //? ============== SKY ==============
+  --color-sky-white: #ffffff;
+  --color-sky-lightest: #f7f9fa;
+  --color-sky-lighter: #f2f4f5;
+  --color-sky-light: #e3e5e6;
+  --color-sky-base: #cdcfd0;
+  --color-sky-dark: #979c9e;
 
-    --color-sky-lightest: #F7F9FA;
-    --color-sky-lighter: #F2F4F5;
-    --color-sky-light: #E3E5E6;
-    --color-sky-base: #CDCFD0;
-    --color-sky-dark: #979C9E;
+  //? ============== Primary ==============
 
-    //? ============== Primary ==============
+  --color-primary-lightest: #e7e7ff;
+  --color-primary-lighter: #c6c4ff;
+  --color-primary-light: #9990ff;
+  --color-primary-base: #6b4eff;
+  --color-primary-dark: #5538ee;
 
-    --color-primary-lightest: #E7E7FF;
-    --color-primary-lighter: #C6C4FF;
-    --color-primary-light: #9990FF;
-    --color-primary-base: #6B4EFF;
-    --color-primary-dark: #5538EE;
+  //? ============== Red ==============
 
-    //? ============== Red ==============
+  --color-red-lightest: #ffe5e5;
+  --color-red-lighter: #ff9898;
+  --color-red-light: #ff6d6d;
+  --color-red-base: #ff5247;
+  --color-red-darkest: #d3180c;
 
-    --color-red-lightest: #FFE5E5;
-    --color-red-lighter: #FF9898;
-    --color-red-light: #FF6D6D;
-    --color-red-base: #FF5247;
-    --color-red-darkest: #D3180C;
+  //? ============== Green ==============
 
+  --color-green-lightest: #ecfce5;
+  --color-green-lighter: #7dde86;
+  --color-green-light: #4cd471;
+  --color-green-base: #23c16b;
+  --color-green-darkest: #198155;
 
-    //? ============== Green ==============
+  //? ============== Yellow ==============
 
-    --color-green-lightest: #ECFCE5;
-    --color-green-lighter: #7DDE86;
-    --color-green-light: #4CD471;
-    --color-green-base: #23C16B;
-    --color-green-darkest: #198155;
+  --color-yellow-lightest: #ffefd7;
+  --color-yellow-lighter: #ffd188;
+  --color-yellow-light: #ffc462;
+  --color-yellow-base: #ffb323;
+  --color-yellow-darkest: #a05e03;
 
+  //? ============== Blue ==============
 
-    //? ============== Yellow ==============
+  --color-blue-lightest: #c9f0ff;
+  --color-blue-lighter: #9bdcfd;
+  --color-blue-light: #6ec2fb;
+  --color-blue-base: #48a7f8;
+  --color-blue-darkest: #0065d0;
 
-    --color-yellow-lightest: #FFEFD7;
-    --color-yellow-lighter: #FFD188;
-    --color-yellow-light: #FFC462;
-    --color-yellow-base: #FFB323;
-    --color-yellow-darkest: #A05E03;
+  //? ============== Facebook ==============
 
-    //? ============== Blue ==============
+  --color-facebook-base: #0078ff;
+  --color-facebook-dark: #0067db;
 
-    --color-blue-lightest: #C9F0FF;
-    --color-blue-lighter: #9BDCFD;
-    --color-blue-light: #6EC2FB;
-    --color-blue-base: #48A7F8;
-    --color-blue-darkest: #0065D0;
+  //? ============== Twitter ==============
 
-    //? ============== Facebook ==============
+  --color-twitter-base: #1da1f2;
+  --color-twitter-dark: #0c90e1;
 
-    --color-facebook-base: #0078FF;
-    --color-facebook-dark: #0067DB;
+  //* ============== Typography ==============
 
-    //? ============== Twitter ==============
+  --typography-type-1: 48px / 56px;
+  --typography-type-2: 32px / 36px;
+  --typography-type-3: 24px / 32px;
 
-    --color-twitter-base: #1DA1F2;
-    --color-twitter-dark: #0C90E1;
+  //? ============== Large ==============
+  --typography-large-none: 18px / 18px;
+  --typography-large-tight: 18px / 20px;
+  --typography-large-normal: 18px / 24px;
 
-    //* ============== Typography ==============
+  //? ============== Regular ==============
+  --typography-regular-none: 16px / 16px;
+  --typography-regular-tight: 16px / 20px;
+  --typography-regular-normal: 16px / 24px;
 
-    --typography-type-1: 48px / 56px;
-    --typography-type-2: 32px / 36px;
-    --typography-type-3: 24px / 32px;
+  //? ============== Small ==============
+  --typography-small-none: 14px / 14px;
+  --typography-small-tight: 14px / 16px;
+  --typography-small-normal: 14px / 20px;
 
-    //? ============== Large ==============
-    --typography-large-none: 18px / 18px;
-    --typography-large-tight: 18px / 20px;
-    --typography-large-normal: 18px / 24px;
+  //? ============== Tiny ==============
+  --typography-tiny-none: 12px / 12px;
+  --typography-tiny-tight: 12px / 14px;
+  --typography-tiny-normal: 12px / 16px;
 
-    //? ============== Regular ==============
-    --typography-regular-none: 16px / 16px;
-    --typography-regular-tight: 16px / 20px;
-    --typography-regular-normal: 16px / 24px;
+  //* ============== Box Shadow ==============
 
-    //? ============== Small ==============
-    --typography-small-none: 14px / 14px;
-    --typography-small-tight: 14px / 16px;
-    --typography-small-normal: 14px / 20px;
-
-    //? ============== Tiny ==============
-    --typography-tiny-none: 12px / 12px;
-    --typography-tiny-tight: 12px / 14px;
-    --typography-tiny-normal: 12px / 16px;
-
-    //* ============== Box Shadow ==============
-
-    --box-shadow-small: 0px 0px 1px rgba(20, 20, 20, 0.04), 0px 0px 8px rgba(20, 20, 20, 0.08);
-    --box-shadow-medium:  0px 0px 1px rgba(20, 20, 20, 0.08), 0px 1px 8px 2px rgba(20, 20, 20, 0.08);
-    --box-shadow-large: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
-
+  --box-shadow-small: 0px 0px 1px rgba(20, 20, 20, 0.04),
+    0px 0px 8px rgba(20, 20, 20, 0.08);
+  --box-shadow-medium: 0px 0px 1px rgba(20, 20, 20, 0.08),
+    0px 1px 8px 2px rgba(20, 20, 20, 0.08);
+  --box-shadow-large: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
 }

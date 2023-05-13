@@ -1,0 +1,127 @@
+//Light
+
+.LightTabBars {
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px;
+    background: var(--color-sky-white);
+    .LightTabBarsTitle {
+        margin-top: 3px;
+        height: 12px;
+        width: 100%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        color: var(--color-ink-light);
+    }
+    svg {
+        height: 20px;
+        width: 100%;
+        border-radius: 0px;
+        path {
+            stroke: var(--color-sky-dark);
+        }
+    }
+}
+
+.LightTabBarsOn {
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px;
+    background: var(--color-sky-white);
+    .LightTabBarsTitleOn {
+        margin-top: 3px;
+        height: 12px;
+        width: 125px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        color: var(--color-primary-base);
+    }
+    svg {
+        height: 20px;
+        width: 100%;
+        border-radius: 0px;
+        path {
+            stroke: var(--color-primary-base);
+        }
+    }
+}
+
+//Dark
+
+.DarkTabBars {
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px;
+    background: var(--color-ink-darker);
+    .DarkTabBarsTitle {
+        margin-top: 3px;
+        height: 12px;
+        width: 100%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        color: var(--color-sky-dark);
+    }
+    svg {
+        height: 20px;
+        width: 100%;
+        border-radius: 0px;
+        path {
+            stroke: var(--color-ink-light);
+        }
+    }
+}
+
+.DarkTabBarsOn {
+    height: 56px;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px;
+    background: var(--color-ink-darker);
+    .DarkTabBarsTitleOn {
+        margin-top: 3px;
+        height: 12px;
+        width: 125px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        color: var(--color-sky-white);
+    }
+    svg {
+        height: 20px;
+        width: 100%;
+        border-radius: 0px;
+        path {
+            stroke: var(--color-sky-white);
+        }
+    }
+}

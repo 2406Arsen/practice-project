@@ -1,0 +1,105 @@
+.ButtonIcon {
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.large {
+    width: 48px;
+    height: 48px;
+  }
+  &.small {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.primary {
+    background-color: var(--color-primary-base);
+    svg {
+      // fill: red;
+      path {
+        stroke: var(--color-sky-white);
+      }
+    }
+    &:active {
+      background-color: var(--color-primary-dark);
+    }
+    &:disabled {
+      background-color: var(--color-sky-light);
+      svg {
+        // fill: red;
+        path {
+          stroke: var(--color-sky-dark);
+        }
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: var(--color-primary-lightest);
+    &:active {
+      background-color: var(--color-primary-lighter);
+    }
+    &:disabled {
+      background-color: var(--color-sky-light);
+    }
+  }
+  &.outline {
+    border: 1px solid var(--color-primary-base);
+    &:active {
+      border: 1px solid var(--color-primary-dark);
+    }
+    &:disabled {
+      border: 1px solid var(--color-sky-base);
+    }
+  }
+  &.transparent {
+    background-color: transparent;
+    &:active {
+      background-color: var(--color-primary-lightest);
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+}
+
+.dark {
+  &.primary {
+    background-color: var(--color-primary-base);
+    &:active {
+      background-color: var(--color-primary-dark);
+    }
+    &:disabled {
+      background-color: var(--color-ink-dark);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--color-primary-lighter);
+    &:active {
+      background-color: var(--color-primary-light);
+    }
+    &:disabled {
+      background-color: var(--color-ink-dark);
+    }
+  }
+  &.outline {
+    border: 1px solid var(--color-primary-light);
+    &:active {
+      border: 1px solid var(--color-primary-base);
+    }
+    &:disabled {
+      border: 1px solid var(--color-ink-dark);
+    }
+  }
+  &.transparent {
+    background-color: transparent;
+    &:active {
+      background-color: var(--color-primary-lighter);
+    }
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+}
