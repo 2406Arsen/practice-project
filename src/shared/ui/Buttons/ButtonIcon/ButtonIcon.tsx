@@ -11,6 +11,7 @@ export enum ButtonTypes {
   OUTLIINE = "outline",
   TRANSPARENT = "transparent",
 }
+
 export enum ButtonSize {
   LARGE = "large",
   SMALL = "small",
