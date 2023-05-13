@@ -1,0 +1,12 @@
+.TableSmallButton{
+
+    width: 74px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-primary-base);
+    border-radius: 48px;
+}
