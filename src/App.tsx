@@ -25,18 +25,26 @@ const App = () => {
   const handleOpen = () => {
     setIsOpen(true);
   };
-  console.log(isOpen);
-  const options = ["Option 1", "Option 2", "Option 3"];
-  const handleOptionSelect = (option: string) => {
-    console.log(`Selected option: ${option}`);
-  };
+
   return (
     <div className={classNames("App", {}, [theme])}>
       <button onClick={toggleTheme}>toggle theme</button>
       <Component />
-      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY}/>
+      <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} />
       <Button mode="Primary" size="large" state="Default" type="button" onClick={handleOpen} >open Pop-up</Button>
-      {isOpen ? <PopApp action="remove-item" isOpen={isOpen} onClose={handleClose} image imageSize="large" /> : null}
+      {
+        isOpen ?
+          <PopApp
+            action="opps-button"
+            isOpen={isOpen}
+            onClose={handleClose}
+            image
+            imageSize="small"
+
+          />
+          : null
+      }
+
       <Avatars
         size={AvatarsSize.LARGE}
         source="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?cs=srgb&dl=pexels-pixabay-39866.jpg&fm=jpg"
@@ -54,7 +62,9 @@ const App = () => {
       />
 
 
-      <Button mode="Primary" size="large" state={'Default'}  >Button </Button>
+      <Button mode="Primary" size="large" state={'Default'} type="button"  >
+        Button
+      </Button>
     </div>
   );
 };

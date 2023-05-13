@@ -1,15 +1,14 @@
-import React, { ButtonHTMLAttributes } from 'react';
-import styles from "./button.module.scss";
-import { ReactComponent as Arrow } from "./Button-icon/arrow-forward.svg"
-import { ReactComponent as Comment } from "./Button-icon/comment-icon.svg"
+import styles from "./Button.module.scss";
+import { ReactComponent as Arrow } from 'shared/assets/icons/arrow-right.svg';
+import { ReactComponent as Comment } from 'shared/assets/icons/message-circle.svg';
 import { useTheme } from 'providers/ThemeProvider';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useState } from 'react'
 
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonProps = {
   className?: string
   size: 'small' | 'large' | 'block';
+  type: 'button' | 'submit' | 'reset';
   mode: 'Primary' | 'Secondary' | 'Outline' | 'Transparent';
   state: 'Default' | 'Disabled';
   icon?: boolean;
@@ -21,22 +20,22 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button: React.FC<ButtonProps> = ({
   className = undefined,
   size = 'block',
+  type = 'button',
   mode = 'Primary',
   state = 'Default',
   icon = false,
   iconPosition = 'left',
   children,
-  ...rest
+  onClick,
 }) => {
   const buttonClassNames = [styles[`Button--${mode}`], styles[`Button--${size}`], styles[`Button--${state}`]];
   if (icon) {
     buttonClassNames.push(styles[`Button--icon ${styles[`Button--icon-${iconPosition}`]}`]);
   }
   const { theme } = useTheme()
-  const [isHovered, setHovered] = useState(false)
   let Icon = (iconPosition === 'right' ? Arrow : Comment)
   return (
-    <button disabled={state === 'Disabled' ? true : false} className={classNames(buttonClassNames.join(" "), {}, [className, styles[theme]])} {...rest}>
+    <button disabled={state === 'Disabled' ? true : false} className={classNames(buttonClassNames.join(" "), {}, [className, styles[theme]])} type={type} onClick={onClick}>
       {icon && iconPosition === 'left' && <Icon className={styles["icon"]} />}
       {children &&
         <div className={styles["icon-position"]}>

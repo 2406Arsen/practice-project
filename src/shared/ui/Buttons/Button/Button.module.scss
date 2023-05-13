@@ -6,7 +6,7 @@
 
     span{
         // position: absolute;
-        width: 121px;
+        width: 122px;
         height: 16px;
         font-family: 'Inter';
         font-style: normal;
@@ -20,11 +20,9 @@
 
     }
     .icon{
-        fill: var(--color-sky-light);
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        //  transform: translate(-50%,-50%);
+        path{
+            stroke: var(--color-sky-light);  
+          }
     }
     &:active{
         background-color: var(--color-primary-dark);
@@ -35,7 +33,9 @@
             color: var(--color-sky-dark);
         }
         .icon{
-            fill: var(--color-sky-dark);
+            path{
+                stroke: var(--color-sky-dark);
+              }
         }
     }
     &.dark:disabled{
@@ -44,7 +44,9 @@
             color: var(--color-sky-dark);
         }
         .icon{
-            fill: var(--color-sky-dark);
+            path{
+                stroke: var(--color-sky-dark)
+              }
         }
     }
 }
@@ -68,7 +70,9 @@
 
     }
     .icon{
-        fill: var(--color-primary-base);
+        path{
+          stroke: var(--color-primary-base);  
+        }
     }
     &:active{
        background-color: var(--color-sky-lighter); 
@@ -79,7 +83,9 @@
         color: var(--color-sky-dark);
     }
     .icon{
-        fill: var(--color-sky-dark);
+        path{
+            stroke: var(--color-sky-dark);
+          }
     }
     }
     &.dark{
@@ -88,7 +94,9 @@
             color: var(--color-primary-dark);
         }
         .icon{
-            fill: var(--color-primary-dark);
+            path{
+                stroke: var(--color-primary-dark);
+              }
         }
     }
     &.dark:active{
@@ -97,7 +105,9 @@
             color: var(--color-primary-dark);
         }
         .icon{
-            fill: var(--color-primary-dark);
+            path{
+                stroke: var(--color-primary-dark);
+              }
         }
     }
     &.dark:disabled{
@@ -106,7 +116,9 @@
             color: var(--color-ink-light);
         }
         .icon{
-            fill: var(--color-ink-light);
+            path{
+                stroke: var(--color-ink-light);
+              }
         }
     }
 }
@@ -131,7 +143,9 @@
 
     }
     .icon{
-        fill: var(--color-primary-base);
+        path{
+            stroke: var(--color-primary-base);
+          }
     }
     &:active{
         border: 1px solid var(--color-primary-dark);
@@ -139,7 +153,9 @@
             color: var(--color-primary-dark);
         }
         .icon{
-            fill: var(--color-primary-dark);
+            path{
+                stroke: var(--color-primary-dark);
+              }
         }
     }
     &:disabled{
@@ -148,7 +164,9 @@
         color: var(--color-sky-base);
     }
     .icon{
-        fill: var(--color-sky-base);
+        path{
+            stroke: var(--color-sky-base);
+        }
     }
     }
     &.dark{
@@ -157,7 +175,9 @@
             color: var(--color-primary-light);
         }
         .icon{
-            fill: var(--color-primary-light);
+            path{
+                stroke: var(--color-primary-light);
+            }
         }
     }
     &.dark:active{
@@ -166,7 +186,9 @@
             color: var(--color-primary-base);
         }
         .icon{
-            fill: var(--color-primary-base);
+            path{
+                stroke: var(--color-primary-base);
+            }
         }
     }
     &.dark:disabled{
@@ -175,7 +197,9 @@
             color: var(--color-ink-base);
         }
         .icon{
-            fill: var(--color-ink-base);
+            path{
+                stroke: var(--color-ink-base);
+            }   
         }
     }
 }
@@ -198,7 +222,9 @@
 
     }
     .icon{
-        fill: var(--color-primary-base);
+        path{
+            stroke: var(--color-primary-base);
+        }   
     }
     &:active{
          background-color: var(--color-primary-lightest);
@@ -208,7 +234,9 @@
         color: var(--color-sky-base);
         }
         .icon{
-            fill: var(--color-sky-base);
+            path{
+                stroke: var(--color-sky-base);
+            }   
         }
     }
     &.dark{
@@ -216,7 +244,9 @@
             color: var(--color-primary-base);
         }
         .icon{
-            fill: var(--color-primary-base);
+            path{
+                stroke: var(--color-primary-base);
+            }   
         }
     }
     &.dark:active{
@@ -225,7 +255,9 @@
             color: var(--color-primary-base);
         }
         .icon{
-            fill: var(--color-primary-base);
+            path{
+                stroke: var(--color-primary-base);
+            }   
         }
     }
     &.dark:disabled{
@@ -233,7 +265,9 @@
             color: var(--color-ink-base);
         }
         .icon{
-            fill: var(--color-ink-base);
+            path{
+                stroke: var(--color-ink-base);
+            }   
         }
     }
 }
@@ -243,15 +277,12 @@
     display: flex;
     align-items: center;
     padding: 10px;
-
-    // flex-direction: row-reverse;
 }
 .Button--large{
     display: flex;
     align-items: center;
     width: 218px;
     height: 48px;
-    // padding: 12px, 32px, 12px, 16px;
     gap: 24px;
     box-sizing: border-box;
     padding: 10px;
@@ -263,8 +294,6 @@
     width: 168px;
     height: 32px;
     padding: 10px;
-
-    // padding: 8px, 16px, 8px, 8px;
     gap: 8px;
     box-sizing: border-box;
 }
@@ -272,7 +301,5 @@
     width: 91%;
     display: flex;
     justify-content: center;
-    // padding-bottom: 3px;
-    // padding: 0;
-    // margin: 0;
+    text-align: center;
 }
