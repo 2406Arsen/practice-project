@@ -20,6 +20,12 @@ import Snackbars, {
   SnackbarsTypes,
 } from "shared/ui/Snackbars/Snackbars";
 import PopApp from "shared/ui/Popapp/Pop-up";
+import Date from "shared/ui/Partials/Date/Date";
+import Overlay from "shared/ui/Partials/Overlay/Overlay";
+import SegmentedControls from "shared/ui/Partials/SegmentedControls/SegmentedControls";
+import TabBars from "shared/ui/Partials/TabBars/TabBars";
+import Tables from "shared/ui/Partials/Tables/Tables";
+import Tabs from "shared/ui/Partials/Tabs/Tabs";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -124,6 +130,14 @@ const App = () => {
         >
         Hover
       </Tooltip>
+
+
+      <Date date={1000}/>
+      <Overlay />
+      <SegmentedControls content="hello"/>
+      <TabBars title="title"/>
+      <Tables content="content" />
+      <Tabs menu="menu"/>
     </div>
   );
 };
