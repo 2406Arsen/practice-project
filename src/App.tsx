@@ -2,6 +2,7 @@ import { Component } from "components/Component";
 import { useTheme } from "providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import Avatars, { AvatarsSize } from "shared/ui/Avatars/Avatars";
+import Button from "shared/ui/Buttons/Button/Button";
 import {
   ButtonIcon,
   ButtonSize,
@@ -35,6 +36,9 @@ const App = () => {
         isCaption
         snackbarText="Snackbar Text"
       />
+
+
+      <Button mode="Primary" size="large" state={'Default'}  >Button </Button>
     </div>
   );
 };
