@@ -24,7 +24,7 @@ const App = () => {
       <button onClick={toggleTheme}>toggle theme</button>
       <Component />
       <ButtonIcon size={ButtonSize.LARGE} type={ButtonTypes.PRIMARY} disabled />
-      {/* <Avatars
+      <Avatars
         size={AvatarsSize.LARGE}
         source="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?cs=srgb&dl=pexels-pixabay-39866.jpg&fm=jpg"
       />
@@ -35,10 +35,8 @@ const App = () => {
       <Switch disabled/>
       <RadioButton disabled/>
       <Checkbox disabled/>
-      <Stepper size={ButtonSize.LARGE}/> */}
-
-
-
+      <Stepper size={ButtonSize.LARGE}/>
+      
       <Table />
       <Table rightPart={<TableLink to=""/>}/>
       <Table rightPart={<RadioButton/>}/>
