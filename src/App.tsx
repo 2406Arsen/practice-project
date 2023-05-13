@@ -8,6 +8,10 @@ import {
   ButtonTypes,
 } from "shared/ui/Buttons/ButtonIcon";
 import ImageRatio, { ImageRatios } from "shared/ui/ImageRatio/ImageRatio";
+import Snackbars, {
+  SnackbarsActions,
+  SnackbarsTypes,
+} from "shared/ui/Snackbars/Snackbars";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -23,6 +27,13 @@ const App = () => {
       <ImageRatio
         ratio={ImageRatios.ONETOONE}
         source="https://img.freepik.com/free-photo/beautiful-view-greenery-bridge-forest-perfect-background_181624-17827.jpg?w=2000"
+      />
+      <Snackbars
+        type={SnackbarsTypes.BOX}
+        action={SnackbarsActions.ICON}
+        isLeftIcon
+        isCaption
+        snackbarText="Snackbar Text"
       />
     </div>
   );
