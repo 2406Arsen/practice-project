@@ -6,12 +6,14 @@ import cls from './RadioButton.module.scss'
 
 interface RadioButtonProps {
     disabled?: boolean;
+    name?: string
 }
 
 const RadioButton: React.FC<RadioButtonProps> = memo((props) => {
   const [ isSelected, setIsSelected ] = useState(false)
   const {
     disabled,
+    name,
   } = props;
 
   const { theme } = useTheme();
@@ -33,6 +35,7 @@ const RadioButton: React.FC<RadioButtonProps> = memo((props) => {
           >
         <input 
               type="radio" 
+              name={name}
               onClick= {Checker}
               disabled= {disabled}
               />

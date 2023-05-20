@@ -24,16 +24,14 @@ import Date from "shared/ui/Partials/Date/Date";
 import Overlay from "shared/ui/Partials/Overlay/Overlay";
 import SegmentedControls from "shared/ui/Partials/SegmentedControls/SegmentedControls";
 import TabBars from "shared/ui/Partials/TabBars/TabBars";
-import Tables from "shared/ui/Partials/Tables/Tables";
+import { TableType } from "shared/ui/Table/TableBoxes/TableBoxes";
 import Tabs from "shared/ui/Partials/Tabs/Tabs";
 import Checkbox from "shared/ui/Checkbox/Checkbox";
 import RadioButton from "shared/ui/RadioButton/RadioButton";
 import Stepper from "shared/ui/Stepper/Stepper";
 import Switch from "shared/ui/Switch/Switch";
-import Table from "shared/ui/Table/Table";
-import TableSmallButton from "shared/ui/Table/TableItem/TableSmallButton";
-import { Link } from "react-router-dom";
-import { TableLink } from "shared/ui/Table/TableItem/TableLink";
+import TableBoxes from "shared/ui/Table/TableBoxes/TableBoxes";
+import Tables from "shared/ui/Partials/Tables/Tables";
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -145,41 +143,18 @@ const App = () => {
       <SegmentedControls content="hello"/>
       <TabBars title="title"/>
       <Tables content="content" />
-      <Tabs menu="menu"/>
-      <Switch disabled/>
-      <RadioButton disabled/>
-      <Checkbox disabled/>
+      <Tabs menu="menu"/> 
+      <Switch />
+      <RadioButton />
+      <RadioButton />
+      <Checkbox />
       <Stepper size={ButtonSize.LARGE}/>
-      
-      <Table />
-      <Table rightPart={<TableLink to=""/>}/>
-      <Table rightPart={<RadioButton/>}/>
-      <Table rightPart={<TableSmallButton/>}/>
-      <Table rightPart={<Switch/>}/>
-      <br />
-      <br />
-      <Table leftPart="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DywNbzehIh-L7BZcTMq4k3V6xIyRbXOCMOgK83GGKQ&s"/>
-      <Table 
-            leftPart="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DywNbzehIh-L7BZcTMq4k3V6xIyRbXOCMOgK83GGKQ&s"
-            rightPart={<TableLink to=""/>}
-            isCaption={true}
-        />  
-      <Table 
-            leftPart="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DywNbzehIh-L7BZcTMq4k3V6xIyRbXOCMOgK83GGKQ&s"
-            rightPart={<RadioButton/>}
-            isCaption={true}
-        />
-      <Table 
-            leftPart="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DywNbzehIh-L7BZcTMq4k3V6xIyRbXOCMOgK83GGKQ&s"
-            rightPart={<TableSmallButton/>}
-            isCaption={true}
-        />
-      <Table 
-            leftPart="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0DywNbzehIh-L7BZcTMq4k3V6xIyRbXOCMOgK83GGKQ&s"
-            rightPart={<Switch/>}
-            isCaption={true}
-        />
-
+      <TableBoxes type={TableType.FIRST_BOX} link=""/>
+      <TableBoxes type={TableType.SECOND_BOX} link=""/>
+      <TableBoxes type={TableType.THIRD_BOX} leftPart={''} link=""/>
+      <TableBoxes type={TableType.FOURTH_BOX}leftPart={''} link=""/>
+      <TableBoxes type={TableType.FIFTH_BOX} link=""/>
+      <TableBoxes type={TableType.SIXTH_BOX} link=""/>
     </div>
   );
 };

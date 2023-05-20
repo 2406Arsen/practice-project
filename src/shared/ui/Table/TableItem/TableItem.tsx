@@ -1,12 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTheme } from 'providers/ThemeProvider'
 import { useMemo,memo } from 'react'
-import cls from './Table.module.scss'
+import cls from './TableItem.module.scss'
 
-
-interface TableProps{
+export interface TableProps{
     isCaption?: boolean,
     leftPart?: string,
+    icon?: any,
     rightPart?: string | any,
 }
 
@@ -16,6 +16,7 @@ const Table:React.FC<TableProps> = memo((props) => {
         isCaption,
         leftPart,
         rightPart,
+        icon,
     } = props;
     
     const { theme }=useTheme()
@@ -34,7 +35,7 @@ const Table:React.FC<TableProps> = memo((props) => {
                         src={leftPart}
                         className={classNames(cls.TableImg, mods, [])}
                       /> 
-                    : null
+                    : <span className={cls.MapIcon}>{icon}</span>
                 }
                 <div className={cls.LeftPartText}>
                     <p>Content is here</p>
