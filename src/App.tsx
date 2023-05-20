@@ -19,7 +19,7 @@ import Snackbars, {
   SnackbarsActions,
   SnackbarsTypes,
 } from "shared/ui/Snackbars/Snackbars";
-import PopApp from "shared/ui/Popapp/Pop-up";
+import PopApp from "shared/ui/Pop-up/Pop-up";
 import Date from "shared/ui/Partials/Date/Date";
 import Overlay from "shared/ui/Partials/Overlay/Overlay";
 import SegmentedControls from "shared/ui/Partials/SegmentedControls/SegmentedControls";
@@ -70,13 +70,9 @@ const App = () => {
       {
         isOpen ?
           <PopApp
-            action="opps-button"
             isOpen={isOpen}
             onClose={handleClose}
-            image
-            imageSize="small"
-
-          /> : null
+          > <Component/></PopApp> : null
       }
       <ProgressBar />
       <ProgressBar />
