@@ -36,6 +36,7 @@ import Tables from "shared/ui/Partials/Tables/Tables";
 
 
 const App = () => {
+  const { theme, toggleTheme } = useTheme()
   const [textFieldValue, setTextFieldValue] = useState("");
   const [locationValue, setLocationValue] = useState("");
   const [phoneValue, setPhoneValue] = useState("");
@@ -53,7 +54,7 @@ const App = () => {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -72,7 +73,7 @@ const App = () => {
           <PopApp
             isOpen={isOpen}
             onClose={handleClose}
-          > <Component/></PopApp> : null
+          > <Component /></PopApp> : null
       }
       <ProgressBar />
       <ProgressBar />
@@ -101,12 +102,12 @@ const App = () => {
         Button
       </Button>
 
-      <Tooltip 
-          position="bottom" 
-          text="Tap to manage" 
-          // onClose={() => ""}
-          linkHref="Link"
-        >
+      <Tooltip
+        position="bottom"
+        text="Tap to manage"
+        // onClose={() => ""}
+        linkHref="Link"
+      >
         Hover
       </Tooltip>
 
@@ -116,16 +117,16 @@ const App = () => {
         label=" Text Label "
         value={textFieldValue}
         placeholder="Placeholer text"
-        // disabled
-        // error
+      // disabled
+      // error
       />
       <PhoneNumberInput
         state={TextFieldsState.FOCUSED}
         onChange={handleChangePhoneInput}
         label=" Text Label "
         value3={phoneValue}
-        // disabled
-        // error
+      // disabled
+      // error
       />
       <LocationInput
         state={TextFieldsState.FOCUSED}
@@ -134,35 +135,35 @@ const App = () => {
         placeholder="Search Location"
         label="Text Label"
         icon
-        // disabled
-        // error
+      // disabled
+      // error
       />
       <SelectInput
         state={TextFieldsState.FOCUSED}
         label=" Text Label "
-        // disabled
-        // error
+      // disabled
+      // error
       />
 
 
 
-      <Date date={1000}/>
+      <Date date={1000} />
       <Overlay />
-      <SegmentedControls content="hello"/>
-      <TabBars title="title"/>
+      <SegmentedControls content="hello" />
+      <TabBars title="title" />
       <Tables content="content" />
-      <Tabs menu="menu"/> 
+      <Tabs menu="menu" />
       <Switch />
       <RadioButton />
       <RadioButton />
       <Checkbox />
-      <Stepper size={ButtonSize.LARGE}/>
-      <TableBoxes type={TableType.FIRST_BOX} link=""/>
-      <TableBoxes type={TableType.SECOND_BOX} link=""/>
-      <TableBoxes type={TableType.THIRD_BOX} leftPart={''} link=""/>
-      <TableBoxes type={TableType.FOURTH_BOX}leftPart={''} link=""/>
-      <TableBoxes type={TableType.FIFTH_BOX} link=""/>
-      <TableBoxes type={TableType.SIXTH_BOX} link=""/>
+      <Stepper size={ButtonSize.LARGE} />
+      <TableBoxes type={TableType.FIRST_BOX} link="" />
+      <TableBoxes type={TableType.SECOND_BOX} link="" />
+      <TableBoxes type={TableType.THIRD_BOX} leftPart={''} link="" />
+      <TableBoxes type={TableType.FOURTH_BOX} leftPart={''} link="" />
+      <TableBoxes type={TableType.FIFTH_BOX} link="" />
+      <TableBoxes type={TableType.SIXTH_BOX} link="" />
     </div>
   );
 };
