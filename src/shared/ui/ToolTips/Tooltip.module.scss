@@ -1,0 +1,83 @@
+.wrapper {
+    position: relative;
+}
+
+.target {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    box-sizing: border-box;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 4px;
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+    }
+}
+
+.centerContainer {
+    position: absolute;
+}
+
+.tooltipBox {
+    position: relative;
+    color: var(--color-ink-darkest);
+    background-color: var(--color-sky-white);
+    box-shadow: var(--box-shadow-medium);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: var(--typography-regular-normal);
+    line-height: 1.5;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+    &::after {
+        content: "";
+        position: absolute;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.closeButton {
+    padding-left: 35px;
+    color: var(--color-sky-dark);
+}
+
+.tooltipLink {
+    padding-left: 15px;
+    color: var(--color-primary-base);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--color-sky-dark) !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.dark {
+    .target {
+        color: var(--color-sky-white);
+    }
+}
+

@@ -1,0 +1,305 @@
+
+.Button--Primary{
+    background-color: var(--color-primary-base);
+    border-radius: 48px;
+    border: none;
+
+    span{
+        // position: absolute;
+        width: 122px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        // display: flex;
+        // align-items: center;
+        // text-align: center;
+        color: var(--color-sky-light);
+
+    }
+    .icon{
+        path{
+            stroke: var(--color-sky-light);  
+          }
+    }
+    &:active{
+        background-color: var(--color-primary-dark);
+    }
+    &:disabled{
+        background-color: var(--color-sky-light);
+        span{
+            color: var(--color-sky-dark);
+        }
+        .icon{
+            path{
+                stroke: var(--color-sky-dark);
+              }
+        }
+    }
+    &.dark:disabled{
+        background-color: var(--color-ink-dark);
+        span{
+            color: var(--color-sky-dark);
+        }
+        .icon{
+            path{
+                stroke: var(--color-sky-dark)
+              }
+        }
+    }
+}
+.Button--Secondary{
+    background-color: var(--color-primary-lightest);
+    border-radius: 48px;
+    border: none;
+    span{
+        // position: absolute;
+        width: 121px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        // display: flex;
+        // align-items: center;
+        // text-align: center;
+        color: var(--color-primary-base);
+
+    }
+    .icon{
+        path{
+          stroke: var(--color-primary-base);  
+        }
+    }
+    &:active{
+       background-color: var(--color-sky-lighter); 
+    }
+    &:disabled{
+         background-color: var(--color-sky-light);
+    span{
+        color: var(--color-sky-dark);
+    }
+    .icon{
+        path{
+            stroke: var(--color-sky-dark);
+          }
+    }
+    }
+    &.dark{
+        background-color: var(--color-primary-lighter);
+        span{
+            color: var(--color-primary-dark);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-dark);
+              }
+        }
+    }
+    &.dark:active{
+        background-color: var(--color-primary-light);
+        span{
+            color: var(--color-primary-dark);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-dark);
+              }
+        }
+    }
+    &.dark:disabled{
+        background-color: var(--color-ink-dark);
+        span{
+            color: var(--color-ink-light);
+        }
+        .icon{
+            path{
+                stroke: var(--color-ink-light);
+              }
+        }
+    }
+}
+.Button--Outline{
+    // background-color: var(--color-primary-base);
+
+    border-radius: 48px;
+    border: 1px solid var(--color-primary-base);
+    span{
+        // position: absolute;
+        width: 121px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        // display: flex;
+        // align-items: center;
+        // text-align: center;
+        color: var(--color-primary-base);
+
+    }
+    .icon{
+        path{
+            stroke: var(--color-primary-base);
+          }
+    }
+    &:active{
+        border: 1px solid var(--color-primary-dark);
+        span{
+            color: var(--color-primary-dark);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-dark);
+              }
+        }
+    }
+    &:disabled{
+        border: 1px solid var(--color-sky-base);
+    span{
+        color: var(--color-sky-base);
+    }
+    .icon{
+        path{
+            stroke: var(--color-sky-base);
+        }
+    }
+    }
+    &.dark{
+        border: 1px solid var(--color-primary-light);
+        span{
+            color: var(--color-primary-light);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-light);
+            }
+        }
+    }
+    &.dark:active{
+        border: 1px solid var(--color-primary-base);
+        span{
+            color: var(--color-primary-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-base);
+            }
+        }
+    }
+    &.dark:disabled{
+        border: 1px solid var(--color-ink-base);
+        span{
+            color: var(--color-ink-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-ink-base);
+            }   
+        }
+    }
+}
+.Button--Transparent{
+    border-radius: 48px;
+    border: none;
+    span{
+        // position: absolute;
+        width: 121px;
+        height: 16px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        // display: flex;
+        // align-items: center;
+        // text-align: center;
+        color: var(--color-primary-base);
+
+    }
+    .icon{
+        path{
+            stroke: var(--color-primary-base);
+        }   
+    }
+    &:active{
+         background-color: var(--color-primary-lightest);
+    }
+    &:disabled{
+        span{
+        color: var(--color-sky-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-sky-base);
+            }   
+        }
+    }
+    &.dark{
+        span{
+            color: var(--color-primary-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-base);
+            }   
+        }
+    }
+    &.dark:active{
+        background-color: var(--color-primary-lighter);
+        span{
+            color: var(--color-primary-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-primary-base);
+            }   
+        }
+    }
+    &.dark:disabled{
+        span{
+            color: var(--color-ink-base);
+        }
+        .icon{
+            path{
+                stroke: var(--color-ink-base);
+            }   
+        }
+    }
+}
+.Button--block{
+    width: 327px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.Button--large{
+    display: flex;
+    align-items: center;
+    width: 218px;
+    height: 48px;
+    gap: 24px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.Button--small{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 168px;
+    height: 32px;
+    padding: 10px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+.icon-position{
+    width: 91%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
