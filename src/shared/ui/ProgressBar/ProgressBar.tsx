@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
-// import cls from "./ProgressBar.module.scss";
-import "./ProgressBar.css";
+import { useState, useEffect } from "react";
+import cls from "./ProgressBar.module.scss";
+import { classNames } from "shared/lib/classNames/classNames";
+import { useTheme } from "providers/ThemeProvider";
+// import "./ProgressBar.css";
 
 export const ProgressBar = () => {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(50);
+  const { theme } = useTheme()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -15,16 +18,17 @@ export const ProgressBar = () => {
       clearInterval(timer);
     };
   }, []);
+  
   return (
-    <div className="container">
-      <div className="progress-bar">
+    <div className={classNames(cls.container, {}, [cls[theme]])}>
+      <div className={cls.progressBar}>
         <div
-          className="progress-bar-fill"
+          className={cls.progressBarFill}
           style={{ width: `${progress}%` }}
-        ></div>
+        />
       </div>
       <div
-        className="progress-label"
+        className={cls.progressLabel}
         style={{ color: "var(--color-primary-base)" }}
       >
         {progress}%

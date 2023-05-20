@@ -1,18 +1,29 @@
 .container {
   margin: 20px 0 0 20px;
+  .progressBar {
+    width: 327px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: var(--color-sky-light);
+    .progressBarFill {
+      height: 100%;
+      border-radius: 10px;
+      background-color: var(--color-primary-base);
+      transition: width 0.5s ease-out;
+    }
+  }
+  .progressLabel {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444444;
+  }
+  
 }
-
-.progress-bar {
-  width: 327px;
-  height: 4px;
-  border-radius: 100px;
-  // background-color: var(--color-sky-light);
-  background-color: var(--color-ink-darker);
-}
-
-.progress-bar-fill {
-  height: 100%;
-  border-radius: 10px;
-  background-color: var(--color-primary-base);
-  transition: width 0.5s ease-out;
+.dark {
+  &.container {
+    .progressBar {
+      background-color: var(--color-ink-darker);
+    }
+  }
 }
