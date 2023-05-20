@@ -15,7 +15,6 @@ export const ProgressBar = () => {
       clearInterval(timer);
     };
   }, []);
-
   return (
     <div className="container">
       <div className="progress-bar">
