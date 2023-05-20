@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Popup.module.scss';
-import Button from '../Buttons/Button/Button';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'providers/ThemeProvider';
-import popupTestImage from "shared/assets/images/popupTestImage.jpg"
 import { useClickOutside } from 'hooks/use-click-outside';
 interface PopupProps {
   isOpen: boolean;
