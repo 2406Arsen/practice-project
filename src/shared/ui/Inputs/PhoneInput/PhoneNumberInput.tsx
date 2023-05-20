@@ -1,6 +1,6 @@
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import cls from "./PhoneeInput.module.scss";
+import cls from "./PhoneNumberInput.module.scss";
 import { FC, useMemo } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "providers/ThemeProvider";
@@ -11,18 +11,20 @@ interface PhoneeInputsProps {
   state?: TextFieldsState;
   className?: string | undefined;
   label?: string;
+  disabled?: boolean;
   error?: boolean;
-  onChange3 :  (event: React.ChangeEvent<HTMLInputElement>) => void; 
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const PhoneeInput: FC<PhoneeInputsProps> = (props) => {
+const PhoneNumberInput: FC<PhoneeInputsProps> = (props) => {
   const {
     value3,
     state = TextFieldsState.DEFAULT,
     className,
     label,
+    disabled,
     error = false,
-    onChange3
+    onChange,
   } = props;
 
   const { theme } = useTheme();
@@ -35,13 +37,19 @@ const PhoneeInput: FC<PhoneeInputsProps> = (props) => {
     cls[theme],
   ]);
 
-  const handleInputChange3 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange3(event);
+  const handlePhoneNumberChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    onChange(event);
   };
 
   return (
-    <div className={cls.div}>
-      {label && <label className={cls.PhoneeInputLabel}>{label}</label>}
+    <div className={classNames(cls.div, {}, [cls[theme]])}>
+      {label && (
+        <label className={classNames(cls.PhoneeInputLabel, {}, [cls[theme]])}>
+          {label}
+        </label>
+      )}
       <PhoneInput
         country={"am"}
         value={value3}
@@ -49,10 +57,12 @@ const PhoneeInput: FC<PhoneeInputsProps> = (props) => {
         inputStyle={{
           width: "367px",
           height: "66px",
-          borderRadius: "8px"
+          borderRadius: "8px",
+          margin: "8px",
         }}
         buttonClass={cls.buttonClass}
-        onChange={()=>handleInputChange3}
+        onChange={() => handlePhoneNumberChange}
+        disabled={disabled}
       />
       {value3 && !error && <div className={cls.TextFieldsCaption}>Caption</div>}
       {error && <div className={cls.PhoneInputErrorText}>Error Message</div>}
@@ -60,4 +70,4 @@ const PhoneeInput: FC<PhoneeInputsProps> = (props) => {
   );
 };
 
-export default PhoneeInput;
+export default PhoneNumberInput;

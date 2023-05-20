@@ -1,15 +1,13 @@
 .div {
-    margin: 8px;
-
     .PhoneeInputLabel {
         font-size: 16px;
         font-weight: 700;
-        margin-bottom: 8px;
+        margin: 5px 8px 4px 8px;
         color: var(--color-ink-darkest)
     }
 
     .PhoneeInput {
-        margin-top: 8px !important;
+        margin: 8px !important;
         border-radius: 8px;
         font-size: var(--typography-regular-tight) !important;
 
@@ -37,7 +35,7 @@
             color: var(--color-ink-darkest) !important;
         }
 
-        &.disabled {
+        &:disabled {
             border: 2px solid var(--color-sky-lighter) !important;
             background-color: var(--color-sky-lightest) !important;
             color: var(--color-sky-base) !important;
@@ -50,19 +48,19 @@
         color: var(--color-red-base);
         margin: 8px;
     }
-    
+
     .TextFieldsCaption {
         font-size: var(--typography-regular-none);
         color: var(--color-ink-light);
         font-size: 14px;
         margin: 8px;
-      }
-    
+    }
+
 
     .buttonClass {
         border-top-left-radius: 8px;
         border-bottom-left-radius: 8px;
-        margin-top: 8px;
+        margin: 8px;
         background-color: var(--color-sky-white) !important;
     }
 }
@@ -70,46 +68,47 @@
 // --- dark mod ---
 
 .dark {
-    &.PhoneeInputLabel {
-        font-size: 16px;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: var(--color-sky-darkest) !important
-    }
-
-    &.PhoneeInput {
-        border-radius: 8px;
-        font-size: var(--typography-regular-none) !important;
-
-        &.default {
-            border: 2px solid var(--color-ink-dark) !important;
-            background-color: var(--color-ink-darkest) !important;
-            color: var(--color-sky-dark) !important
-        }
-
-        &.focused {
-            border: 2px solid var(--color-primary-base) !important;
-            background-color: var(--color-ink-darkest) !important;
+    &.div {
+        .PhoneeInputLabel {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
             color: var(--color-sky-white) !important
         }
+        .PhoneeInput {
+            border-radius: 8px;
+            font-size: var(--typography-regular-none) !important;
 
-        &.filled {
-            border: 2px solid var(--color-ink-dark) !important;
-            background-color: var(--color-ink-darkest) !important;
-            color: var(--color-sky-dark) !important
-        }
+            &.default {
+                border: 2px solid var(--color-ink-dark) !important;
+                background-color: var(--color-ink-darkest) !important;
+                color: var(--color-sky-dark) !important
+            }
 
-        &.error {
-            border: 2px solid var(--color-red-base) !important;
-            background-color: var(--color-ink-darkest) !important;
-            color: var(--color-sky-white) !important
-        }
+            &.focused {
+                border: 2px solid var(--color-primary-base) !important;
+                background-color: var(--color-ink-darkest) !important;
+                color: var(--color-sky-white) !important
+            }
 
-        &.disabled {
-            border: 2px solid var(--color-ink-darker) !important;
-            background-color: var(--color-ink-darker) !important;
-            color: var(--color-ink-base) !important;
-            cursor: not-allowed !important;
+            &.filled {
+                border: 2px solid var(--color-ink-dark) !important;
+                background-color: var(--color-ink-darkest) !important;
+                color: var(--color-sky-dark) !important
+            }
+
+            &.error {
+                border: 2px solid var(--color-red-base) !important;
+                background-color: var(--color-ink-darkest) !important;
+                color: var(--color-sky-white) !important
+            }
+
+            &:disabled {
+                border: 2px solid var(--color-ink-darker) !important;
+                background-color: var(--color-ink-darker) !important;
+                color: var(--color-ink-base) !important;
+                cursor: not-allowed !important;
+            }
         }
     }
 }

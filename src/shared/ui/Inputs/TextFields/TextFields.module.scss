@@ -3,7 +3,7 @@
   flex-direction: column;
 
   .TextFieldsLabel {
-    margin: 5px 0 4px 8px;
+    margin: 5px 8px 4px 8px;
     font-size: 16px;
     font-weight: 700;
     color: var(--color-ink-darkest) ;
@@ -44,11 +44,10 @@
       color: var(--color-ink-darkest) ;
     }
 
-    &.disabled {
+    &:disabled {
       border-color: var(--color-sky-lighter) ;
       background-color: var(--color-sky-lightest) ;
       color: var(--color-sky-base) ;
-      cursor: not-allowed ;
     }
   }
 
@@ -71,13 +70,6 @@
     position: relative;
   }
 
-  .icon {
-    position: absolute;
-    left: 17px;
-    bottom: 30px;
-    // bottom: 60px; errori depqum
-    fill: var(--color-sky-dark) ;
-  }
 }
 
 
@@ -125,11 +117,10 @@
       color: var(--color-sky-white) 
     }
 
-    &.disabled {
+    &:disabled {
       border-color: var(--color-ink-darker) ;
       background-color: var(--color-ink-darker) ;
       color: var(--color-ink-base) ;
-      cursor: not-allowed ;
     }
 
   }
@@ -145,15 +136,6 @@
     color: var(--color-sky-dark);
     font-size: 14px;
     margin: 8px;
-  }
-
-
-  .columns .icon {
-    position: absolute;
-    left: 17px;
-    bottom: 30px;
-    // bottom: 60px; errori depqum
-    fill: var(--color-ink-darkest) ;
   }
 
 }
