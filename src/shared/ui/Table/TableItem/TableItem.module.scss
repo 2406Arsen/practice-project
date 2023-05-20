@@ -1,0 +1,67 @@
+.Table{
+    height: 64px;
+    width: 355px;
+    padding: 0 10px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    color: var(--color-ink-darkest);
+    background-color: var(--color-sky-white);
+
+    .MapIcon{
+        svg{
+            width: 18px;
+            height: 22px;
+            path{
+                stroke: var(--color-ink-darkest);
+                
+            }
+        }
+    }
+};
+
+.dark{
+    background-color: var(--color-ink-darkest);
+    .LeftPartText > p{
+        color: var(--color-sky-white);
+    }
+    .Caption{
+        color: var(--color-sky-dark);
+    }
+    .MapIcon{
+        svg{
+            path{
+                stroke: var(--color-sky-white);
+            }
+        }
+    }
+};
+
+.LeftPart{
+    display: flex;
+    align-items: center;
+};
+
+.LeftPartText{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+};
+
+.TableImg{
+    height: 40px;
+    width: 40px;
+    border-radius: 0px;
+};
+
+.Caption{
+    width: 75px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-ink-lighter);
+};
+

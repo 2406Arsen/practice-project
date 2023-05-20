@@ -6,6 +6,7 @@ import cls from './Swetch.module.scss'
 
 interface SwitchesProps {
   disabled?: boolean;
+  checked?:boolean
 }
 
 const Switch: React.FC<SwitchesProps> = memo((props) => {
