@@ -10,9 +10,10 @@ import {
   ButtonSize,
   ButtonTypes,
 } from "shared/ui/Buttons/ButtonIcon";
-import PhoneeInput from "shared/ui/PhoneInput/PhoneeInput";
-import SelectInput from "shared/ui/SelectInput/SelectInput";
-import TextFields, { TextFieldsState } from "shared/ui/TextFields/TextFields";
+import TextFields, { TextFieldsState } from "shared/ui/Inputs/TextFields/TextFields";
+import PhoneNumberInput from "shared/ui/Inputs/PhoneInput/PhoneNumberInput";
+import SelectInput from "shared/ui/Inputs/SelectInput/SelectInput";
+import LocationInput from "shared/ui/Inputs/LocationInput/LocationInput";
 import Tooltip from "shared/ui/ToolTips/ToolTips";
 import ImageRatio, { ImageRatios } from "shared/ui/ImageRatio/ImageRatio";
 import Snackbars, {
@@ -35,25 +36,27 @@ import TableSmallButton from "shared/ui/Table/TableItem/TableSmallButton";
 import { Link } from "react-router-dom";
 import { TableLink } from "shared/ui/Table/TableItem/TableLink";
 
+
 const App = () => {
   const { theme, toggleTheme } = useTheme();
-  const [value, setValue] = useState("");
-  const [value2, setValue2] = useState("");
-  const [value3, setValue3] = useState("");
+  const [textFieldValue, setTextFieldValue] = useState("");
+  const [locationValue, setLocationValue] = useState("");
+  const [phoneValue, setPhoneValue] = useState("");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
+  const handleChangeTextField = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTextFieldValue(event.target.value);
   };
 
-  const handleChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue2(event.target.value);
+  const handleLocation = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setLocationValue(event.target.value);
   };
 
-  const handleChange3 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue3(event.target.value);
+  const handleChangePhoneInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoneValue(event.target.value);
   };
 
   const [isOpen, setIsOpen] = useState(false);
+  
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -104,40 +107,50 @@ const App = () => {
       <Button mode="Primary" size="large" state={'Default'} type="button"  >
         Button
       </Button>
-      <TextFields
-        state={TextFieldsState.DEFAULT}
-        onChange={handleChange}
-        onChange2={handleChange2}
-        label=" Text Label "
-        value={value}
-        value2={value2}
-        placeholder1="Placeholer text"
-        placeholder2="Search location"
-        icon
-        // error
-      />
-      <PhoneeInput
-        state={TextFieldsState.FOCUSED}
-        onChange3={handleChange3}
-        label=" Text Label "
-        value3={value3}
-        // error
-      />
-      <SelectInput
-        state={TextFieldsState.FOCUSED}
-        label=" Text Label "
-        
-        // error
-      />
 
       <Tooltip 
-          position="top" 
+          position="bottom" 
           text="Tap to manage" 
           // onClose={() => ""}
           linkHref="Link"
         >
         Hover
       </Tooltip>
+
+      <TextFields
+        state={TextFieldsState.FOCUSED}
+        onChange={handleChangeTextField}
+        label=" Text Label "
+        value={textFieldValue}
+        placeholder="Placeholer text"
+        // disabled
+        // error
+      />
+      <PhoneNumberInput
+        state={TextFieldsState.FOCUSED}
+        onChange={handleChangePhoneInput}
+        label=" Text Label "
+        value3={phoneValue}
+        // disabled
+        // error
+      />
+      <LocationInput
+        state={TextFieldsState.FOCUSED}
+        onChange={handleLocation}
+        value={locationValue}
+        placeholder="Search Location"
+        label="Text Label"
+        icon
+        // disabled
+        // error
+      />
+      <SelectInput
+        state={TextFieldsState.FOCUSED}
+        label=" Text Label "
+        // disabled
+        // error
+      />
+
 
 
       <Date date={1000}/>

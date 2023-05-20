@@ -4,6 +4,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { useTheme } from "providers/ThemeProvider";
 import { getStyleFromPosition } from "./getStyleFromPosition";
 import { ReactComponent as Close } from "../../assets/icons/close.svg";
+
 interface TooltipProps {
   position: "top" | "right" | "bottom" | "left";
   text: string;
@@ -14,11 +15,18 @@ interface TooltipProps {
 }
 
 const Tooltip: FC<TooltipProps> = (props) => {
-  const { children, position, text, className, linkHref, onClose } = props;
+  const { 
+    children, 
+    position, 
+    text, 
+    className, 
+    linkHref, 
+    onClose 
+  } = props;
 
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
-  const showTooltip = isHovered || isFocused;
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const { theme } = useTheme();
 
@@ -26,17 +34,39 @@ const Tooltip: FC<TooltipProps> = (props) => {
 
   const tooltipClasses = classNames(cls.wrapper, mods, [
     className,
-    cls[theme]]
-  );
+    cls[theme]
+  ]);
+
+  const handleTargetMouseEnter = () => {
+    setIsHovered(true);
+    setShowTooltip(true);
+  };
+
+  const handleTargetMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const handleTargetFocus = () => {
+    setIsFocused(true);
+    setShowTooltip(true);
+  };
+
+  const handleTooltipMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleTooltipMouseLeave = () => {
+    setIsHovered(false);
+    setShowTooltip(false);
+  };
 
   return (
     <div className={tooltipClasses}>
       <div
         className={cls.target}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
+        onMouseEnter={handleTargetMouseEnter}
+        onMouseLeave={handleTargetMouseLeave}
+        onFocus={handleTargetFocus}
       >
         {children}
       </div>
@@ -45,6 +75,9 @@ const Tooltip: FC<TooltipProps> = (props) => {
           className={cls.centerContainer}
           data-position={position}
           style={getStyleFromPosition(position)}
+          onMouseEnter={handleTooltipMouseEnter}
+          onMouseLeave={handleTooltipMouseLeave}
+          // onBlur={}
         >
           <div className={cls.tooltipBoxWrapper}>
             <div className={cls.tooltipBox}>
@@ -68,54 +101,4 @@ const Tooltip: FC<TooltipProps> = (props) => {
     </div>
   );
 };
-
 export default Tooltip;
-
-// import cls from "./ToolTips.module.scss";
-// // type TooltipProps = {
-// //   text: string;
-// //   position: "top" | "bottom" | "left" | "right";
-// //   children: React.ReactNode;
-// // };
-// const Tooltip = ({ text }: any) => {
-// //   return (
-// //     <div className={cls.Tooltip}>
-// //       <div className={cls.customTooltip}>
-// //         Hover to see tooltip
-// //         <span className={cls.customTooltipText}>{text}</span>
-// //       </div>
-// //     </div>
-// //   );
-// };
-
-// export default Tooltip;
-
-//---------------------------------
-
-// import { Tooltip } from "react-tooltip";
-// import cls from "./ToolTips.module.scss";
-// import { classNames } from "shared/lib/classNames/classNames";
-
-// type TooltipsProps = {
-//   text: string;
-//   position: "top" | "bottom" | "left" | "right";
-// };
-
-// const ToolTips = ({ text, position }: TooltipsProps) => {
-//   return (
-//     <div className={classNames(cls.ToolTips)}>
-//       {/* <Tooltip
-//         placement={position}
-//         overlay={<span>Tap to manage</span>}
-//         overlayClassName={classNames(cls.ToolTipsOverlay)}
-//       >
-//         <span>{text}</span>
-//       </Tooltip> */}
-//       <Tooltip/>
-//     </div>
-
-//   );
-// };
-
-// export default ToolTips;
-// ------------------------------

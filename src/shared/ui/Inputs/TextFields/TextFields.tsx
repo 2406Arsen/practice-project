@@ -1,12 +1,10 @@
 import React, { FC, memo, useMemo } from "react";
 import cls from "./TextFields.module.scss";
 import { classNames } from "shared/lib/classNames/classNames";
-import { ReactComponent as LocationIcon } from "./Icon/vector.svg";
 import { useTheme } from "providers/ThemeProvider";
 
 export enum TextFieldsState {
   DEFAULT = "default",
-  DISABLED = "disabled",
   FILLED = "filled",
   FOCUSED = "focused",
   ERROR = "error",
@@ -15,32 +13,24 @@ export enum TextFieldsState {
 interface TextFieldsProps {
   label?: string;
   value: string;
-  value2: string;
-  placeholder1?: string;
-  placeholder2?: string;
+  placeholder?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onChange2: (event: React.ChangeEvent<HTMLInputElement>) => void;
   state?: TextFieldsState;
-  icon?: boolean;
-  iconPosition?: "left" | "right";
   className?: string | undefined;
   error?: boolean;
+  disabled?:boolean
 }
 
 const TextFields: FC<TextFieldsProps> = memo((props) => {
   const {
     label,
     value,
-    value2,
-    placeholder1,
-    placeholder2,
+    placeholder,
     className,
     onChange,
-    onChange2,
     state = TextFieldsState.DEFAULT,
-    icon = false,
-    iconPosition = "left",
-    error = false
+    error = false,
+    disabled
   } = props;
 
   const { theme } = useTheme();
@@ -57,10 +47,6 @@ const TextFields: FC<TextFieldsProps> = memo((props) => {
     onChange(event);
   };
 
-  const handleInputChange2 = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange2(event);
-  };
-
   return (
     <div className={classNames(cls.TextFieldsWrapper, {}, [cls[theme]])}>
 
@@ -69,33 +55,14 @@ const TextFields: FC<TextFieldsProps> = memo((props) => {
         <input
           className={inputClasses}
           value={value}
-          placeholder={placeholder1}
+          placeholder={placeholder}
           onChange={handleInputChange}
+          disabled={disabled}
         />
         {error && <div className={cls.TextFieldErrorText}>Error Message</div>}
         {value && !error && (
           <div className={cls.TextFieldsCaption}>Caption</div>
         )}
-
-      </div>
-
-      <div className={cls.columns}>
-        {label && <label className={cls.TextFieldsLabel}>{label}
-
-
-          {icon && iconPosition === "left" && <LocationIcon className={cls.icon} />}
-          <input
-            className={inputClasses}
-            placeholder={placeholder2}
-            value={value2}
-            onChange={handleInputChange2}
-          />
-        </label>}
-
-        {value2 && !error && (
-          <div className={cls.TextFieldsCaption}>Caption 2</div>
-        )}
-        {error && <div className={cls.TextFieldErrorText}>Error Message</div>}
 
       </div>
 
